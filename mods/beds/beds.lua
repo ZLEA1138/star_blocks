@@ -7,24 +7,24 @@ local S = beds.get_translator
 
 beds.register_bed("beds:fancy_bed", {
 	description = S("Fancy Bed"),
-	inventory_image = "beds_bed_fancy.png",
-	wield_image = "beds_bed_fancy.png",
+	inventory_image = "bed_fancy.png",
+	wield_image = "bed_fancy.png",
 	tiles = {
 		bottom = {
-			"beds_bed_top1.png",
-			"beds_bed_under.png",
-			"beds_bed_side1.png",
-			"beds_bed_side1.png^[transformFX",
-			"beds_bed_foot.png",
-			"beds_bed_foot.png",
+			"bed_top1.png",
+			"bed_under.png",
+			"bed_side1.png",
+			"bed_side1.png^[transformFX",
+			"bed_foot.png",
+			"bed_foot.png",
 		},
 		top = {
-			"beds_bed_top2.png",
-			"beds_bed_under.png",
-			"beds_bed_side2.png",
-			"beds_bed_side2.png^[transformFX",
-			"beds_bed_head.png",
-			"beds_bed_head.png",
+			"bed_top2.png",
+			"bed_under.png",
+			"bed_side2.png",
+			"bed_side2.png^[transformFX",
+			"bed_head.png",
+			"bed_head.png",
 		}
 	},
 	nodebox = {
@@ -58,24 +58,24 @@ beds.register_bed("beds:fancy_bed", {
 
 beds.register_bed("beds:bed", {
 	description = S("Simple Bed"),
-	inventory_image = "beds_bed.png",
-	wield_image = "beds_bed.png",
+	inventory_image = "bed.png",
+	wield_image = "bed.png",
 	tiles = {
 		bottom = {
-			"beds_bed_top_bottom.png^[transformR90",
-			"beds_bed_under.png",
-			"beds_bed_side_bottom_r.png",
-			"beds_bed_side_bottom_r.png^[transformFX",
-			"beds_transparent.png",
-			"beds_bed_side_bottom.png"
+			"bed_top_bottom.png^[transformR90",
+			"bed_under.png",
+			"bed_side_bottom_r.png",
+			"bed_side_bottom_r.png^[transformFX",
+			"transparent.png",
+			"bed_side_bottom.png"
 		},
 		top = {
-			"beds_bed_top_top.png^[transformR90",
-			"beds_bed_under.png",
-			"beds_bed_side_top_r.png",
-			"beds_bed_side_top_r.png^[transformFX",
-			"beds_bed_side_top.png",
-			"beds_transparent.png",
+			"bed_top_top.png^[transformR90",
+			"bed_under.png",
+			"bed_side_top_r.png",
+			"bed_side_top_r.png^[transformFX",
+			"bed_side_top.png",
+			"transparent.png",
 		}
 	},
 	nodebox = {

@@ -22,7 +22,7 @@ farming.register_plant("farming:wheat", {
 	description = S("Wheat Seed"),
 	harvest_description = S("Wheat"),
 	paramtype2 = "meshoptions",
-	inventory_image = "farming_wheat_seed.png",
+	inventory_image = "wheat_seed.png",
 	steps = 8,
 	minlight = 13,
 	maxlight = default.LIGHT_MAX,
@@ -33,13 +33,13 @@ farming.register_plant("farming:wheat", {
 
 minetest.register_craftitem("farming:flour", {
 	description = S("Flour"),
-	inventory_image = "farming_flour.png",
+	inventory_image = "flour.png",
 	groups = {food_flour = 1, flammable = 1},
 })
 
 minetest.register_craftitem("farming:bread", {
 	description = S("Bread"),
-	inventory_image = "farming_bread.png",
+	inventory_image = "bread.png",
 	on_use = minetest.item_eat(5),
 	groups = {food_bread = 1, flammable = 2},
 })
@@ -63,7 +63,7 @@ minetest.register_craft({
 farming.register_plant("farming:cotton", {
 	description = S("Cotton Seed"),
 	harvest_description = S("Cotton"),
-	inventory_image = "farming_cotton_seed.png",
+	inventory_image = "cotton_seed.png",
 	steps = 8,
 	minlight = 13,
 	maxlight = default.LIGHT_MAX,
@@ -92,7 +92,7 @@ minetest.register_decoration({
 
 minetest.register_craftitem("farming:string", {
 	description = S("String"),
-	inventory_image = "farming_string.png",
+	inventory_image = "string.png",
 	groups = {flammable = 2},
 })
 

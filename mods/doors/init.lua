@@ -82,8 +82,8 @@ end
 -- nodes from being placed in the top half of the door.
 minetest.register_node("doors:hidden", {
 	description = S("Hidden Door Segment"),
-	inventory_image = "doors_hidden_segment.png^default_invisible_node_overlay.png",
-	wield_image = "doors_hidden_segment.png^default_invisible_node_overlay.png",
+	inventory_image = "door_hidden_segment.png^invisible_node_overlay.png",
+	wield_image = "door_hidden_segment.png^invisible_node_overlay.png",
 	drawtype = "airlike",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -480,9 +480,9 @@ function doors.register(name, def)
 end
 
 doors.register("door_wood", {
-		tiles = {{ name = "doors_door_wood.png", backface_culling = true }},
+		tiles = {{ name = "door_wood.png", backface_culling = true }},
 		description = S("Wooden Door"),
-		inventory_image = "doors_item_wood.png",
+		inventory_image = "door_wood_inv.png",
 		groups = {node = 1, choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
 		gain_open = 0.06,
 		gain_close = 0.13,
@@ -493,28 +493,10 @@ doors.register("door_wood", {
 		}
 })
 
-doors.register("door_steel", {
-		tiles = {{name = "doors_door_steel.png", backface_culling = true}},
-		description = S("Steel Door"),
-		inventory_image = "doors_item_steel.png",
-		protected = true,
-		groups = {node = 1, cracky = 1, level = 2},
-		sounds = default.node_sound_metal_defaults(),
-		sound_open = "doors_steel_door_open",
-		sound_close = "doors_steel_door_close",
-		gain_open = 0.2,
-		gain_close = 0.2,
-		recipe = {
-			{"default:steel_ingot", "default:steel_ingot"},
-			{"default:steel_ingot", "default:steel_ingot"},
-			{"default:steel_ingot", "default:steel_ingot"},
-		}
-})
-
 doors.register("door_glass", {
-		tiles = {"doors_door_glass.png"},
+		tiles = {"door_glass.png"},
 		description = S("Glass Door"),
-		inventory_image = "doors_item_glass.png",
+		inventory_image = "door_glass_inv.png",
 		groups = {node = 1, cracky=3, oddly_breakable_by_hand=3},
 		sounds = default.node_sound_glass_defaults(),
 		sound_open = "doors_glass_door_open",
@@ -529,9 +511,9 @@ doors.register("door_glass", {
 })
 
 doors.register("door_obsidian_glass", {
-		tiles = {"doors_door_obsidian_glass.png"},
+		tiles = {"door_obsidian_glass.png"},
 		description = S("Obsidian Glass Door"),
-		inventory_image = "doors_item_obsidian_glass.png",
+		inventory_image = "door_obsidian_glass_inv.png",
 		groups = {node = 1, cracky=3},
 		sounds = default.node_sound_glass_defaults(),
 		sound_open = "doors_glass_door_open",
@@ -556,9 +538,9 @@ function doors.register_door(name, def)
 	local modname = name:sub(1, i - 1)
 	if not def.tiles then
 		if def.protected then
-			def.tiles = {{name = "doors_door_steel.png", backface_culling = true}}
+			def.tiles = {{name = "door_steel.png", backface_culling = true}}
 		else
-			def.tiles = {{name = "doors_door_wood.png", backface_culling = true}}
+			def.tiles = {{name = "door_wood.png", backface_culling = true}}
 		end
 		minetest.log("warning", modname .. " registered door \"" .. name .. "\" " ..
 				"using deprecated API method \"doors.register_door()\" but " ..
@@ -737,28 +719,13 @@ end
 
 doors.register_trapdoor("doors:trapdoor", {
 	description = S("Wooden Trapdoor"),
-	inventory_image = "doors_trapdoor.png",
-	wield_image = "doors_trapdoor.png",
-	tile_front = "doors_trapdoor.png",
-	tile_side = "doors_trapdoor_side.png",
+	inventory_image = "trapdoor.png",
+	wield_image = "trapdoor.png",
+	tile_front = "trapdoor.png",
+	tile_side = "trapdoor_side.png",
 	gain_open = 0.06,
 	gain_close = 0.13,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, door = 1},
-})
-
-doors.register_trapdoor("doors:trapdoor_steel", {
-	description = S("Steel Trapdoor"),
-	inventory_image = "doors_trapdoor_steel.png",
-	wield_image = "doors_trapdoor_steel.png",
-	tile_front = "doors_trapdoor_steel.png",
-	tile_side = "doors_trapdoor_steel_side.png",
-	protected = true,
-	sounds = default.node_sound_metal_defaults(),
-	sound_open = "doors_steel_door_open",
-	sound_close = "doors_steel_door_close",
-	gain_open = 0.2,
-	gain_close = 0.2,
-	groups = {cracky = 1, level = 2, door = 1},
 })
 
 minetest.register_craft({
@@ -767,14 +734,6 @@ minetest.register_craft({
 		{"group:wood", "group:wood", "group:wood"},
 		{"group:wood", "group:wood", "group:wood"},
 		{"", "", ""},
-	}
-})
-
-minetest.register_craft({
-	output = "doors:trapdoor_steel",
-	recipe = {
-		{"default:steel_ingot", "default:steel_ingot"},
-		{"default:steel_ingot", "default:steel_ingot"},
 	}
 })
 
@@ -858,35 +817,35 @@ end
 
 doors.register_fencegate("doors:gate_wood", {
 	description = S("Apple Wood Fence Gate"),
-	texture = "default_wood.png",
+	texture = "wood.png",
 	material = "default:wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 })
 
 doors.register_fencegate("doors:gate_acacia_wood", {
 	description = S("Acacia Wood Fence Gate"),
-	texture = "default_acacia_wood.png",
+	texture = "acacia_wood.png",
 	material = "default:acacia_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 })
 
 doors.register_fencegate("doors:gate_junglewood", {
 	description = S("Jungle Wood Fence Gate"),
-	texture = "default_junglewood.png",
+	texture = "jungle_wood.png",
 	material = "default:junglewood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 })
 
 doors.register_fencegate("doors:gate_pine_wood", {
 	description = S("Pine Wood Fence Gate"),
-	texture = "default_pine_wood.png",
+	texture = "pine_wood.png",
 	material = "default:pine_wood",
 	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
 })
 
 doors.register_fencegate("doors:gate_aspen_wood", {
 	description = S("Aspen Wood Fence Gate"),
-	texture = "default_aspen_wood.png",
+	texture = "aspen_wood.png",
 	material = "default:aspen_wood",
 	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3}
 })

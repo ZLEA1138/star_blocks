@@ -18,7 +18,7 @@ for i in ipairs (butter_list) do
 		description = desc,
 		drawtype = "plantlike",
 		tiles = {{
-			name = "butterflies_butterfly_"..name.."_animated.png",
+			name = "butterfly_"..name.."_anim.png",
 			animation = {
 				type = "vertical_frames",
 				aspect_w = 16,
@@ -26,8 +26,8 @@ for i in ipairs (butter_list) do
 				length = 3
 			},
 		}},
-		inventory_image = "butterflies_butterfly_"..name..".png",
-		wield_image =  "butterflies_butterfly_"..name..".png",
+		inventory_image = "butterfly_"..name..".png",
+		wield_image =  "butterfly_"..name..".png",
 		waving = 1,
 		paramtype = "light",
 		sunlight_propagates = true,
@@ -62,8 +62,8 @@ for i in ipairs (butter_list) do
 
 	minetest.register_node("butterflies:hidden_butterfly_"..name, {
 		drawtype = "airlike",
-		inventory_image = "butterflies_butterfly_"..name..".png^default_invisible_node_overlay.png",
-		wield_image =  "butterflies_butterfly_"..name..".png^default_invisible_node_overlay.png",
+		inventory_image = "butterfly_"..name..".png^invisible_node_overlay.png",
+		wield_image =  "butterfly_"..name..".png^invisible_node_overlay.png",
 		paramtype = "light",
 		sunlight_propagates = true,
 		walkable = false,

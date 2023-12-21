@@ -1,0 +1,5 @@
+===Items===
+default:ultrasonic_generator
+
+===Uses===
+vessels:ferrum_bottle

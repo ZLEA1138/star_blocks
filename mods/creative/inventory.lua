@@ -156,14 +156,14 @@ function creative.register_tab(name, title, items)
 				(inv.size == 0 and ("label[3,2;"..esc(S("No items to show.")).."]") or "") ..
 				"label[5.8,4.15;" .. minetest.colorize("#FFFF00", tostring(pagenum)) .. " / " .. tostring(pagemax) .. "]" ..
 				[[
-					image[4.08,4.2;0.8,0.8;creative_trash_icon.png]
+					image[4.08,4.2;0.8,0.8;icon_trash.png]
 					listcolors[#00000069;#5A5A5A;#141318;#30434C;#FFF]
 					list[detached:trash;main;4.02,4.1;1,1;]
 					listring[]
-					image_button[5,4.05;0.8,0.8;creative_prev_icon.png;creative_prev;]
-					image_button[7.25,4.05;0.8,0.8;creative_next_icon.png;creative_next;]
-					image_button[2.63,4.05;0.8,0.8;creative_search_icon.png;creative_search;]
-					image_button[3.25,4.05;0.8,0.8;creative_clear_icon.png;creative_clear;]
+					image_button[5,4.05;0.8,0.8;icon_prev.png;creative_prev;]
+					image_button[7.25,4.05;0.8,0.8;icon_next.png;creative_next;]
+					image_button[2.63,4.05;0.8,0.8;icon_search.png;creative_search;]
+					image_button[3.25,4.05;0.8,0.8;icon_clear.png;creative_clear;]
 				]] ..
 				"tooltip[creative_search;" .. esc(S("Search")) .. "]" ..
 				"tooltip[creative_clear;" .. esc(S("Reset")) .. "]" ..

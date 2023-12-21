@@ -7,7 +7,7 @@ local S = minetest.get_translator("keys")
 
 minetest.register_craftitem("keys:skeleton_key", {
 	description = S("Skeleton Key"),
-	inventory_image = "keys_key_skeleton.png",
+	inventory_image = "key_skeleton.png",
 	on_use = function(itemstack, user, pointed_thing)
 		if pointed_thing.type ~= "node" then
 			return itemstack
@@ -63,7 +63,7 @@ minetest.register_craftitem("keys:skeleton_key", {
 
 minetest.register_craftitem("keys:key", {
 	description = S("Key"),
-	inventory_image = "keys_key.png",
+	inventory_image = "key.png",
 	groups = {key = 1, not_in_creative_inventory = 1},
 	on_place = function(itemstack, placer, pointed_thing)
 		local under = pointed_thing.under

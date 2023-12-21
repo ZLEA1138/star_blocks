@@ -165,9 +165,9 @@ end
 
 xpanes.register_pane("pane", {
 	description = S("Glass Pane"),
-	textures = {"default_glass.png", "", "xpanes_edge.png"},
-	inventory_image = "default_glass.png",
-	wield_image = "default_glass.png",
+	textures = {"glass.png", "", "glass_edge.png"},
+	inventory_image = "glass.png",
+	wield_image = "glass.png",
 	sounds = default.node_sound_glass_defaults(),
 	groups = {snappy=2, cracky=3, oddly_breakable_by_hand=3},
 	recipe = {
@@ -178,9 +178,9 @@ xpanes.register_pane("pane", {
 
 xpanes.register_pane("obsidian_pane", {
 	description = S("Obsidian Glass Pane"),
-	textures = {"default_obsidian_glass.png", "", "xpanes_edge_obsidian.png"},
-	inventory_image = "default_obsidian_glass.png",
-	wield_image = "default_obsidian_glass.png",
+	textures = {"obsidian_glass.png", "", "obsidian_glass_edge.png"},
+	inventory_image = "obsidian_glass.png",
+	wield_image = "obsidian_glass.png",
 	sounds = default.node_sound_glass_defaults(),
 	groups = {snappy=2, cracky=3},
 	recipe = {
@@ -190,15 +190,15 @@ xpanes.register_pane("obsidian_pane", {
 })
 
 xpanes.register_pane("bar", {
-	description = S("Steel Bars"),
-	textures = {"xpanes_bar.png", "", "xpanes_bar_top.png"},
-	inventory_image = "xpanes_bar.png",
-	wield_image = "xpanes_bar.png",
+	description = S("Ferrum Bars"),
+	textures = {"bar.png", "", "bar_top.png"},
+	inventory_image = "bar.png",
+	wield_image = "bar.png",
 	groups = {cracky=2},
 	sounds = default.node_sound_metal_defaults(),
 	recipe = {
-		{"default:steel_ingot", "default:steel_ingot", "default:steel_ingot"},
-		{"default:steel_ingot", "default:steel_ingot", "default:steel_ingot"}
+		{"ores:ferrum_ingot", "ores:ferrum_ingot", "ores:ferrum_ingot"},
+		{"ores:ferrum_ingot", "ores:ferrum_ingot", "ores:ferrum_ingot"}
 	}
 })
 
@@ -214,14 +214,14 @@ minetest.register_lbm({
 	end
 })
 
--- Register steel bar doors and trapdoors
+-- Register ferrum bar doors and trapdoors
 
 if minetest.get_modpath("doors") then
 
-	doors.register("xpanes:door_steel_bar", {
-		tiles = {{name = "xpanes_door_steel_bar.png", backface_culling = true}},
-		description = S("Steel Bar Door"),
-		inventory_image = "xpanes_item_steel_bar.png",
+	doors.register("xpanes:door_ferrum_bar", {
+		tiles = {{name = "door_ferrum_bar.png", backface_culling = true}},
+		description = S("Ferrum Bar Door"),
+		inventory_image = "door_ferrum_bar_inv.png",
 		protected = true,
 		groups = {node = 1, cracky = 1, level = 2},
 		sounds = default.node_sound_metal_defaults(),
@@ -236,12 +236,12 @@ if minetest.get_modpath("doors") then
 		},
 	})
 
-	doors.register_trapdoor("xpanes:trapdoor_steel_bar", {
-		description = S("Steel Bar Trapdoor"),
-		inventory_image = "xpanes_trapdoor_steel_bar.png",
-		wield_image = "xpanes_trapdoor_steel_bar.png",
-		tile_front = "xpanes_trapdoor_steel_bar.png",
-		tile_side = "xpanes_trapdoor_steel_bar_side.png",
+	doors.register_trapdoor("xpanes:trapdoor_ferrum_bar", {
+		description = S("Ferrum Bar Trapdoor"),
+		inventory_image = "trapdoor_ferrum_bar.png",
+		wield_image = "trapdoor_ferrum_bar.png",
+		tile_front = "trapdoor_ferrum_bar.png",
+		tile_side = "trapdoor_ferrum_bar_side.png",
 		protected = true,
 		groups = {node = 1, cracky = 1, level = 2, door = 1},
 		sounds = default.node_sound_metal_defaults(),
@@ -252,7 +252,7 @@ if minetest.get_modpath("doors") then
 	})
 
 	minetest.register_craft({
-		output = "xpanes:trapdoor_steel_bar",
+		output = "xpanes:trapdoor_ferrum_bar",
 		recipe = {
 			{"xpanes:bar_flat", "xpanes:bar_flat"},
 			{"xpanes:bar_flat", "xpanes:bar_flat"},

@@ -203,7 +203,7 @@ bucket.register_liquid(
 	"default:river_water_source",
 	"default:river_water_flowing",
 	"bucket:bucket_river_water",
-	"bucket_river_water.png",
+	"bucket_water_river.png",
 	S("River Water Bucket"),
 	{tool = 1, water_bucket = 1},
 	true

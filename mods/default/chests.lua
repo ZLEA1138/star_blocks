@@ -299,7 +299,7 @@ function default.chest.register_chest(prefixed_name, d)
 	-- close opened chests on load
 	minetest.register_lbm({
 		label = "close opened chests on load",
-		name = "default:close_" .. prefixed_name:gsub(":", "_") .. "_open",
+		name = ":default:close_" .. prefixed_name:gsub(":", "_") .. "_open",
 		nodenames = {prefixed_name .. "_open"},
 		run_at_every_load = true,
 		action = function(pos, node)
@@ -312,12 +312,12 @@ end
 default.chest.register_chest("default:chest", {
 	description = S("Chest"),
 	tiles = {
-		"default_chest_top.png",
-		"default_chest_top.png",
-		"default_chest_side.png",
-		"default_chest_side.png",
-		"default_chest_front.png",
-		"default_chest_inside.png"
+		"chest_top.png",
+		"chest_top.png",
+		"chest_side.png",
+		"chest_side.png",
+		"chest_front.png",
+		"chest_inside.png"
 	},
 	sounds = default.node_sound_wood_defaults(),
 	sound_open = "default_chest_open",
@@ -328,12 +328,12 @@ default.chest.register_chest("default:chest", {
 default.chest.register_chest("default:chest_locked", {
 	description = S("Locked Chest"),
 	tiles = {
-		"default_chest_top.png",
-		"default_chest_top.png",
-		"default_chest_side.png",
-		"default_chest_side.png",
-		"default_chest_lock.png",
-		"default_chest_inside.png"
+		"chest_top.png",
+		"chest_top.png",
+		"chest_side.png",
+		"chest_side.png",
+		"chest_lock.png",
+		"chest_inside.png"
 	},
 	sounds = default.node_sound_wood_defaults(),
 	sound_open = "default_chest_open",

@@ -36,7 +36,7 @@ local item = {
 			minsize = 5,
 			maxsize = 5,
 			collisiondetection = true,
-			texture = "default_item_smoke.png"
+			texture = "item_smoke.png"
 		})
 	end,
 

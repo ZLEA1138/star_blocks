@@ -38,7 +38,7 @@ end
 local fire_node = {
 	drawtype = "firelike",
 	tiles = {{
-		name = "fire_basic_flame_animated.png",
+		name = "fire_basic_anim.png",
 		animation = {
 			type = "vertical_frames",
 			aspect_w = 16,
@@ -46,7 +46,7 @@ local fire_node = {
 			length = 1
 		}}
 	},
-	inventory_image = "fire_basic_flame.png",
+	inventory_image = "fire_basic.png",
 	paramtype = "light",
 	light_source = 13,
 	walkable = false,
@@ -86,7 +86,7 @@ minetest.register_node("fire:permanent_flame", permanent_fire_node)
 -- Flint and Steel
 minetest.register_tool("fire:flint_and_steel", {
 	description = S("Flint and Steel"),
-	inventory_image = "fire_flint_steel.png",
+	inventory_image = "flint_steel.png",
 	sound = {breaks = "default_tool_breaks"},
 
 	on_use = function(itemstack, user, pointed_thing)
@@ -131,23 +131,6 @@ minetest.register_craft({
 	recipe = {
 		{"default:flint", "default:steel_ingot"}
 	}
-})
-
--- Override coalblock to enable permanent flame above
--- Coalblock is non-flammable to avoid unwanted basic_flame nodes
-minetest.override_item("default:coalblock", {
-	after_destruct = function(pos)
-		pos.y = pos.y + 1
-		if minetest.get_node(pos).name == "fire:permanent_flame" then
-			minetest.remove_node(pos)
-		end
-	end,
-	on_ignite = function(pos)
-		local flame_pos = {x = pos.x, y = pos.y + 1, z = pos.z}
-		if minetest.get_node(flame_pos).name == "air" then
-			minetest.set_node(flame_pos, {name = "fire:permanent_flame"})
-		end
-	end
 })
 
 

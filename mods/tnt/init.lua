@@ -448,13 +448,13 @@ minetest.register_node("tnt:gunpowder", {
 	sunlight_propagates = true,
 	walkable = false,
 	tiles = {
-		"tnt_gunpowder_straight.png",
-		"tnt_gunpowder_curved.png",
-		"tnt_gunpowder_t_junction.png",
-		"tnt_gunpowder_crossing.png"
+		"gunpowder_straight.png",
+		"gunpowder_curved.png",
+		"gunpowder_t_junction.png",
+		"gunpowder_crossing.png"
 	},
-	inventory_image = "tnt_gunpowder_inventory.png",
-	wield_image = "tnt_gunpowder_inventory.png",
+	inventory_image = "gunpowder_inv.png",
+	wield_image = "gunpowder_inv.png",
 	selection_box = {
 		type = "fixed",
 		fixed = {-1/2, -1/2, -1/2, 1/2, -1/2+1/16, 1/2},
@@ -487,7 +487,7 @@ minetest.register_node("tnt:gunpowder_burning", {
 	walkable = false,
 	light_source = 5,
 	tiles = {{
-		name = "tnt_gunpowder_burning_straight_animated.png",
+		name = "gunpowder_burning_straight_anim.png",
 		animation = {
 			type = "vertical_frames",
 			aspect_w = 16,
@@ -496,7 +496,7 @@ minetest.register_node("tnt:gunpowder_burning", {
 		}
 	},
 	{
-		name = "tnt_gunpowder_burning_curved_animated.png",
+		name = "gunpowder_burning_curved_anim.png",
 		animation = {
 			type = "vertical_frames",
 			aspect_w = 16,
@@ -505,7 +505,7 @@ minetest.register_node("tnt:gunpowder_burning", {
 		}
 	},
 	{
-		name = "tnt_gunpowder_burning_t_junction_animated.png",
+		name = "gunpowder_burning_t_junction_anim.png",
 		animation = {
 			type = "vertical_frames",
 			aspect_w = 16,
@@ -514,7 +514,7 @@ minetest.register_node("tnt:gunpowder_burning", {
 		}
 	},
 	{
-		name = "tnt_gunpowder_burning_crossing_animated.png",
+		name = "gunpowder_burning_crossing_anim.png",
 		animation = {
 			type = "vertical_frames",
 			aspect_w = 16,
@@ -567,7 +567,7 @@ minetest.register_craft({
 
 minetest.register_craftitem("tnt:tnt_stick", {
 	description = S("TNT Stick"),
-	inventory_image = "tnt_tnt_stick.png",
+	inventory_image = "tnt_stick.png",
 	groups = {flammable = 5},
 })
 
@@ -614,7 +614,7 @@ function tnt.register_tnt(def)
 	local tnt_top = def.tiles.top or def.name .. "_top.png"
 	local tnt_bottom = def.tiles.bottom or def.name .. "_bottom.png"
 	local tnt_side = def.tiles.side or def.name .. "_side.png"
-	local tnt_burning = def.tiles.burning or def.name .. "_top_burning_animated.png"
+	local tnt_burning = def.tiles.burning or def.name .. "_top_burning_anim.png"
 	if not def.damage_radius then def.damage_radius = def.radius * 2 end
 
 	if enable_tnt then

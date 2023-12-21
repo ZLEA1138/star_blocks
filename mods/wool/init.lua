@@ -11,8 +11,8 @@ for i = 1, #dyes do
 	local color_group = "color_" .. name
 
 	minetest.register_node("wool:" .. name, {
-		description = S(desc .. " Wool"),
-		tiles = {"wool_" .. name .. ".png"},
+		description = S(desc .. " Cloth"),
+		tiles = {"cloth_" .. name .. ".png"},
 		is_ground_content = false,
 		groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3,
 				flammable = 3, wool = 1, [color_group] = 1},

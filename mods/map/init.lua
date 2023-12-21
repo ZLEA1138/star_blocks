@@ -49,7 +49,7 @@ minetest.after(5.3, cyclic_update)
 
 minetest.register_craftitem("map:mapping_kit", {
 	description = S("Mapping Kit") .. "\n" .. S("Use with 'Minimap' key"),
-	inventory_image = "map_mapping_kit.png",
+	inventory_image = "mapping_kit.png",
 	stack_max = 1,
 	groups = {flammable = 3, tool = 1},
 

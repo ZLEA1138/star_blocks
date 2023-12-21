@@ -227,124 +227,51 @@ end)
 -- Craftitem registry
 --
 
-minetest.register_craftitem("default:blueberries", {
-	description = S("Blueberries"),
-	inventory_image = "default_blueberries.png",
-	groups = {food_blueberries = 1, food_berry = 1},
-	on_use = minetest.item_eat(2),
-})
-
 minetest.register_craftitem("default:book", {
 	description = S("Book"),
-	inventory_image = "default_book.png",
+	inventory_image = "book.png",
 	groups = {book = 1, flammable = 3},
 	on_use = book_on_use,
 })
 
 minetest.register_craftitem("default:book_written", {
 	description = S("Book with Text"),
-	inventory_image = "default_book_written.png",
+	inventory_image = "book_written.png",
 	groups = {book = 1, not_in_creative_inventory = 1, flammable = 3},
 	stack_max = 1,
 	on_use = book_on_use,
 })
 
-minetest.register_craftitem("default:bronze_ingot", {
-	description = S("Bronze Ingot"),
-	inventory_image = "default_bronze_ingot.png"
-})
-
 minetest.register_craftitem("default:clay_brick", {
 	description = S("Clay Brick"),
-	inventory_image = "default_clay_brick.png",
+	inventory_image = "clay_brick.png",
 })
 
 minetest.register_craftitem("default:clay_lump", {
 	description = S("Clay Lump"),
-	inventory_image = "default_clay_lump.png",
-})
-
-minetest.register_craftitem("default:coal_lump", {
-	description = S("Coal Lump"),
-	inventory_image = "default_coal_lump.png",
-	groups = {coal = 1, flammable = 1}
-})
-
-minetest.register_craftitem("default:copper_ingot", {
-	description = S("Copper Ingot"),
-	inventory_image = "default_copper_ingot.png"
-})
-
-minetest.register_craftitem("default:copper_lump", {
-	description = S("Copper Lump"),
-	inventory_image = "default_copper_lump.png"
-})
-
-minetest.register_craftitem("default:diamond", {
-	description = S("Diamond"),
-	inventory_image = "default_diamond.png",
+	inventory_image = "clay_lump.png",
 })
 
 minetest.register_craftitem("default:flint", {
 	description = S("Flint"),
-	inventory_image = "default_flint.png"
-})
-
-minetest.register_craftitem("default:gold_ingot", {
-	description = S("Gold Ingot"),
-	inventory_image = "default_gold_ingot.png"
-})
-
-minetest.register_craftitem("default:gold_lump", {
-	description = S("Gold Lump"),
-	inventory_image = "default_gold_lump.png"
-})
-
-minetest.register_craftitem("default:iron_lump", {
-	description = S("Iron Lump"),
-	inventory_image = "default_iron_lump.png"
-})
-
-minetest.register_craftitem("default:mese_crystal", {
-	description = S("Mese Crystal"),
-	inventory_image = "default_mese_crystal.png",
-})
-
-minetest.register_craftitem("default:mese_crystal_fragment", {
-	description = S("Mese Crystal Fragment"),
-	inventory_image = "default_mese_crystal_fragment.png",
+	inventory_image = "flint.png"
 })
 
 minetest.register_craftitem("default:obsidian_shard", {
 	description = S("Obsidian Shard"),
-	inventory_image = "default_obsidian_shard.png",
+	inventory_image = "obsidian_shard.png",
 })
 
 minetest.register_craftitem("default:paper", {
 	description = S("Paper"),
-	inventory_image = "default_paper.png",
+	inventory_image = "paper.png",
 	groups = {flammable = 3},
-})
-
-minetest.register_craftitem("default:steel_ingot", {
-	description = S("Steel Ingot"),
-	inventory_image = "default_steel_ingot.png"
 })
 
 minetest.register_craftitem("default:stick", {
 	description = S("Stick"),
-	inventory_image = "default_stick.png",
+	inventory_image = "stick.png",
 	groups = {stick = 1, flammable = 2},
-})
-
-minetest.register_craftitem("default:tin_ingot", {
-	description = S("Tin Ingot"),
-	inventory_image = "default_tin_ingot.png"
-})
-
-minetest.register_craftitem("default:tin_lump", {
-	description = S("Tin Lump"),
-	inventory_image = "default_tin_lump.png"
 })
 
 --
@@ -363,15 +290,6 @@ minetest.register_craft({
 default.register_craft_metadata_copy("default:book", "default:book_written")
 
 minetest.register_craft({
-	output = "default:bronze_ingot 9",
-	recipe = {
-		{"default:copper_ingot", "default:copper_ingot", "default:copper_ingot"},
-		{"default:copper_ingot", "default:tin_ingot", "default:copper_ingot"},
-		{"default:copper_ingot", "default:copper_ingot", "default:copper_ingot"},
-	}
-})
-
-minetest.register_craft({
 	output = "default:clay_brick 4",
 	recipe = {
 		{"default:brick"},
@@ -386,74 +304,9 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "default:coal_lump 9",
-	recipe = {
-		{"default:coalblock"},
-	}
-})
-
-minetest.register_craft({
-	output = "default:copper_ingot 9",
-	recipe = {
-		{"default:copperblock"},
-	}
-})
-
-minetest.register_craft({
-	output = "default:diamond 9",
-	recipe = {
-		{"default:diamondblock"},
-	}
-})
-
-minetest.register_craft({
-	output = "default:gold_ingot 9",
-	recipe = {
-		{"default:goldblock"},
-	}
-})
-
-minetest.register_craft({
-	output = "default:mese_crystal",
-	recipe = {
-		{"default:mese_crystal_fragment", "default:mese_crystal_fragment", "default:mese_crystal_fragment"},
-		{"default:mese_crystal_fragment", "default:mese_crystal_fragment", "default:mese_crystal_fragment"},
-		{"default:mese_crystal_fragment", "default:mese_crystal_fragment", "default:mese_crystal_fragment"},
-	}
-})
-
-minetest.register_craft({
-	output = "default:mese_crystal 9",
-	recipe = {
-		{"default:mese"},
-	}
-})
-
-minetest.register_craft({
-	output = "default:mese_crystal_fragment 9",
-	recipe = {
-		{"default:mese_crystal"},
-	}
-})
-
-minetest.register_craft({
-	output = "default:obsidian_shard 9",
-	recipe = {
-		{"default:obsidian"}
-	}
-})
-
-minetest.register_craft({
 	output = "default:paper",
 	recipe = {
-		{"default:papyrus", "default:papyrus", "default:papyrus"},
-	}
-})
-
-minetest.register_craft({
-	output = "default:steel_ingot 9",
-	recipe = {
-		{"default:steelblock"},
+		{"default:reeds", "default:reeds", "default:reeds"},
 	}
 })
 
@@ -461,13 +314,6 @@ minetest.register_craft({
 	output = "default:stick 4",
 	recipe = {
 		{"group:wood"},
-	}
-})
-
-minetest.register_craft({
-	output = "default:tin_ingot 9",
-	recipe = {
-		{"default:tinblock"},
 	}
 })
 
@@ -479,31 +325,6 @@ minetest.register_craft({
 	type = "cooking",
 	output = "default:clay_brick",
 	recipe = "default:clay_lump",
-})
-
-minetest.register_craft({
-	type = "cooking",
-	output = "default:copper_ingot",
-	recipe = "default:copper_lump",
-})
-
-minetest.register_craft({
-	type = "cooking",
-	output = "default:gold_ingot",
-	recipe = "default:gold_lump",
-})
-
-
-minetest.register_craft({
-	type = "cooking",
-	output = "default:steel_ingot",
-	recipe = "default:iron_lump",
-})
-
-minetest.register_craft({
-	type = "cooking",
-	output = "default:tin_ingot",
-	recipe = "default:tin_lump",
 })
 
 --
@@ -520,12 +341,6 @@ minetest.register_craft({
 	type = "fuel",
 	recipe = "default:book_written",
 	burntime = 3,
-})
-
-minetest.register_craft({
-	type = "fuel",
-	recipe = "default:coal_lump",
-	burntime = 40,
 })
 
 minetest.register_craft({

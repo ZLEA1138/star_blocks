@@ -223,8 +223,8 @@ local function recipe_fs(fs, data)
 
 	if #data.recipes > 1 then
 		table.insert(fs,
-			"image_button[5.5,1.6;0.8,0.8;craftguide_prev_icon.png;recipe_prev;]"..
-			"image_button[6.2,1.6;0.8,0.8;craftguide_next_icon.png;recipe_next;]"..
+			"image_button[5.5,1.6;0.8,0.8;icon_prev.png;recipe_prev;]"..
+			"image_button[6.2,1.6;0.8,0.8;icon_next.png;recipe_next;]"..
 			"tooltip[recipe_prev;"..esc(S("Previous recipe")).."]"..
 			"tooltip[recipe_next;"..esc(S("Next recipe")).."]")
 	end
@@ -252,13 +252,13 @@ local function recipe_fs(fs, data)
 	end
 
 	if shapeless or recipe.method == "cooking" then
-		table.insert(fs, ("image[3.2,0.5;0.5,0.5;craftguide_%s.png]")
+		table.insert(fs, ("image[3.2,0.5;0.5,0.5;icon_%s.png]")
 			:format(shapeless and "shapeless" or "furnace"))
 		local tooltip = shapeless and S("Shapeless") or
 			S("Cooking time: @1", minetest.colorize("yellow", cooktime))
 		table.insert(fs, "tooltip[3.2,0.5;0.5,0.5;"..esc(tooltip).."]")
 	end
-	table.insert(fs, "image[3,1;1,1;sfinv_crafting_arrow.png]")
+	table.insert(fs, "image[3,1;1,1;icon_crafting_arrow.png]")
 
 	item_button_fs(fs, 4, 1, recipe.output, recipe.output:match("%S*"))
 end
@@ -274,10 +274,10 @@ local function get_formspec(player)
 		"field[0.3,4.2;2.8,1.2;filter;;"..esc(data.filter).."]"..
 		"label[5.8,4.15;"..minetest.colorize("yellow", data.pagenum).." / "..
 			data.pagemax.."]"..
-		"image_button[2.63,4.05;0.8,0.8;craftguide_search_icon.png;search;]"..
-		"image_button[3.25,4.05;0.8,0.8;craftguide_clear_icon.png;clear;]"..
-		"image_button[5,4.05;0.8,0.8;craftguide_prev_icon.png;prev;]"..
-		"image_button[7.25,4.05;0.8,0.8;craftguide_next_icon.png;next;]"..
+		"image_button[2.63,4.05;0.8,0.8;icon_search.png;search;]"..
+		"image_button[3.25,4.05;0.8,0.8;icon_clear.png;clear;]"..
+		"image_button[5,4.05;0.8,0.8;icon_prev.png;prev;]"..
+		"image_button[7.25,4.05;0.8,0.8;icon_next.png;next;]"..
 		"tooltip[search;"..esc(S("Search")).."]"..
 		"tooltip[clear;"..esc(S("Reset")).."]"..
 		"tooltip[prev;"..esc(S("Previous page")).."]"..

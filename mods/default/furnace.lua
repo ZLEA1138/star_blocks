@@ -14,10 +14,10 @@ function default.get_furnace_active_formspec(fuel_percent, item_percent)
 	return "size[8,8.5]"..
 		"list[context;src;2.75,0.5;1,1;]"..
 		"list[context;fuel;2.75,2.5;1,1;]"..
-		"image[2.75,1.5;1,1;default_furnace_fire_bg.png^[lowpart:"..
-		(fuel_percent)..":default_furnace_fire_fg.png]"..
-		"image[3.75,1.5;1,1;gui_furnace_arrow_bg.png^[lowpart:"..
-		(item_percent)..":gui_furnace_arrow_fg.png^[transformR270]"..
+		"image[2.75,1.5;1,1;icon_furnace_fire_bg.png^[lowpart:"..
+		(fuel_percent)..":icon_furnace_fire_fg.png]"..
+		"image[3.75,1.5;1,1;icon_furnace_arrow_bg.png^[lowpart:"..
+		(item_percent)..":icon_furnace_arrow_fg.png^[transformR270]"..
 		"list[context;dst;4.75,0.96;2,2;]"..
 		"list[current_player;main;0,4.25;8,1;]"..
 		"list[current_player;main;0,5.5;8,3;8]"..
@@ -34,8 +34,8 @@ function default.get_furnace_inactive_formspec()
 	return "size[8,8.5]"..
 		"list[context;src;2.75,0.5;1,1;]"..
 		"list[context;fuel;2.75,2.5;1,1;]"..
-		"image[2.75,1.5;1,1;default_furnace_fire_bg.png]"..
-		"image[3.75,1.5;1,1;gui_furnace_arrow_bg.png^[transformR270]"..
+		"image[2.75,1.5;1,1;icon_furnace_fire_bg.png]"..
+		"image[3.75,1.5;1,1;icon_furnace_arrow_bg.png^[transformR270]"..
 		"list[context;dst;4.75,0.96;2,2;]"..
 		"list[current_player;main;0,4.25;8,1;]"..
 		"list[current_player;main;0,5.5;8,3;8]"..
@@ -332,9 +332,9 @@ end
 minetest.register_node("default:furnace", {
 	description = S("Furnace"),
 	tiles = {
-		"default_furnace_top.png", "default_furnace_bottom.png",
-		"default_furnace_side.png", "default_furnace_side.png",
-		"default_furnace_side.png", "default_furnace_front.png"
+		"furnace_top.png", "furnace_bottom.png",
+		"furnace_side.png", "furnace_side.png",
+		"furnace_side.png", "furnace_front.png"
 	},
 	paramtype2 = "facedir",
 	groups = {cracky=2},
@@ -384,11 +384,11 @@ minetest.register_node("default:furnace", {
 minetest.register_node("default:furnace_active", {
 	description = S("Furnace"),
 	tiles = {
-		"default_furnace_top.png", "default_furnace_bottom.png",
-		"default_furnace_side.png", "default_furnace_side.png",
-		"default_furnace_side.png",
+		"furnace_top.png", "furnace_bottom.png",
+		"furnace_side.png", "furnace_side.png",
+		"furnace_side.png",
 		{
-			image = "default_furnace_front_active.png",
+			image = "furnace_front_anim.png",
 			backface_culling = false,
 			animation = {
 				type = "vertical_frames",

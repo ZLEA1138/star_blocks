@@ -32,7 +32,7 @@ local function update_vessels_shelf(pos)
 		end
 		if not invlist or invlist[i]:is_empty() then
 			formspec = formspec ..
-				"image[" .. vx .. "," .. vy .. ";1,1;vessels_shelf_slot.png]"
+				"image[" .. vx .. "," .. vy .. ";1,1;shelf_slot|vessel.png]"
 		else
 			local stack = invlist[i]
 			if not stack:is_empty() then
@@ -51,8 +51,8 @@ end
 
 local vessels_shelf_def = {
 	description = S("Vessels Shelf"),
-	tiles = {"default_wood.png", "default_wood.png", "default_wood.png",
-		"default_wood.png", "vessels_shelf.png", "vessels_shelf.png"},
+	tiles = {"wood.png", "wood.png", "wood.png",
+		"wood.png", "shelf_vessel.png", "shelf_vessel.png"},
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
@@ -106,9 +106,9 @@ minetest.register_craft({
 minetest.register_node("vessels:glass_bottle", {
 	description = S("Empty Glass Bottle"),
 	drawtype = "plantlike",
-	tiles = {"vessels_glass_bottle.png"},
-	inventory_image = "vessels_glass_bottle.png",
-	wield_image = "vessels_glass_bottle.png",
+	tiles = {"glass_bottle.png"},
+	inventory_image = "glass_bottle.png",
+	wield_image = "glass_bottle.png",
 	paramtype = "light",
 	is_ground_content = false,
 	walkable = false,
@@ -132,9 +132,9 @@ minetest.register_craft( {
 minetest.register_node("vessels:drinking_glass", {
 	description = S("Empty Drinking Glass"),
 	drawtype = "plantlike",
-	tiles = {"vessels_drinking_glass.png"},
-	inventory_image = "vessels_drinking_glass_inv.png",
-	wield_image = "vessels_drinking_glass.png",
+	tiles = {"drinking_glass.png"},
+	inventory_image = "drinking_glass_inv.png",
+	wield_image = "drinking_glass.png",
 	paramtype = "light",
 	is_ground_content = false,
 	walkable = false,
@@ -155,12 +155,12 @@ minetest.register_craft( {
 	}
 })
 
-minetest.register_node("vessels:steel_bottle", {
-	description = S("Empty Heavy Steel Bottle"),
+minetest.register_node("vessels:ferrum_bottle", {
+	description = S("Empty Heavy Ferrum Bottle"),
 	drawtype = "plantlike",
-	tiles = {"vessels_steel_bottle.png"},
-	inventory_image = "vessels_steel_bottle.png",
-	wield_image = "vessels_steel_bottle.png",
+	tiles = {"ferrum_bottle.png"},
+	inventory_image = "ferrum_bottle.png",
+	wield_image = "ferrum_bottle.png",
 	paramtype = "light",
 	is_ground_content = false,
 	walkable = false,
@@ -175,9 +175,9 @@ minetest.register_node("vessels:steel_bottle", {
 minetest.register_craft( {
 	output = "vessels:steel_bottle 5",
 	recipe = {
-		{"default:steel_ingot", "", "default:steel_ingot"},
-		{"default:steel_ingot", "", "default:steel_ingot"},
-		{"", "default:steel_ingot", ""}
+		{"ores:ferrum_ingot", "", "ores:ferrum_ingot"},
+		{"ores:ferrum_ingot", "", "ores:ferrum_ingot"},
+		{"", "ores:ferrum_ingot", ""}
 	}
 })
 
@@ -186,7 +186,7 @@ minetest.register_craft( {
 
 minetest.register_craftitem("vessels:glass_fragments", {
 	description = S("Glass Fragments"),
-	inventory_image = "vessels_glass_fragments.png",
+	inventory_image = "glass_fragments.png",
 })
 
 minetest.register_craft( {
@@ -215,8 +215,8 @@ minetest.register_craft({
 
 minetest.register_craft( {
 	type = "cooking",
-	output = "default:steel_ingot",
-	recipe = "vessels:steel_bottle",
+	output = "ores:ferrum_ingot",
+	recipe = "vessels:ferrum_bottle",
 })
 
 minetest.register_craft({

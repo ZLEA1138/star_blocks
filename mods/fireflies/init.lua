@@ -8,7 +8,7 @@ minetest.register_node("fireflies:firefly", {
 	description = S("Firefly"),
 	drawtype = "plantlike",
 	tiles = {{
-		name = "fireflies_firefly_animated.png",
+		name = "firefly_anim.png",
 		animation = {
 			type = "vertical_frames",
 			aspect_w = 16,
@@ -16,8 +16,8 @@ minetest.register_node("fireflies:firefly", {
 			length = 1.5
 		},
 	}},
-	inventory_image = "fireflies_firefly.png",
-	wield_image =  "fireflies_firefly.png",
+	inventory_image = "firefly.png",
+	wield_image =  "firefly.png",
 	waving = 1,
 	paramtype = "light",
 	sunlight_propagates = true,
@@ -54,8 +54,8 @@ minetest.register_node("fireflies:firefly", {
 minetest.register_node("fireflies:hidden_firefly", {
 	description = S("Hidden Firefly"),
 	drawtype = "airlike",
-	inventory_image = "fireflies_firefly.png^default_invisible_node_overlay.png",
-	wield_image =  "fireflies_firefly.png^default_invisible_node_overlay.png",
+	inventory_image = "firefly.png^invisible_node_overlay.png",
+	wield_image =  "firefly.png^invisible_node_overlay.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -90,7 +90,7 @@ minetest.register_node("fireflies:hidden_firefly", {
 -- bug net
 minetest.register_tool("fireflies:bug_net", {
 	description = S("Bug Net"),
-	inventory_image = "fireflies_bugnet.png",
+	inventory_image = "net_bug.png",
 	on_use = function(itemstack, player, pointed_thing)
 		local player_name = player and player:get_player_name() or ""
 		if not pointed_thing or pointed_thing.type ~= "node" or
@@ -127,10 +127,10 @@ minetest.register_craft( {
 -- firefly in a bottle
 minetest.register_node("fireflies:firefly_bottle", {
 	description = S("Firefly in a Bottle"),
-	inventory_image = "fireflies_bottle.png",
-	wield_image = "fireflies_bottle.png",
+	inventory_image = "firefly_bottle.png",
+	wield_image = "firefly_bottle.png",
 	tiles = {{
-		name = "fireflies_bottle_animated.png",
+		name = "firefly_bottle_anim.png",
 		animation = {
 			type = "vertical_frames",
 			aspect_w = 16,
