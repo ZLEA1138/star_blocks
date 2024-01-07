@@ -344,6 +344,41 @@ function default.register_mgv6_ores()
 		y_max          = -256,
 		y_min          = -31000,
 	})
+	
+	-- Adamas
+
+	minetest.register_ore({
+		ore_type       = "scatter",
+		ore            = "ores:stone_with_adamas",
+		wherein        = "default:stone",
+		clust_scarcity = 15 * 15 * 15,
+		clust_num_ores = 1,
+		clust_size     = 1,
+		y_max          = 31000,
+		y_min          = 1025,
+	})
+
+	minetest.register_ore({
+		ore_type       = "scatter",
+		ore            = "ores:stone_with_adamas",
+		wherein        = "default:stone",
+		clust_scarcity = 17 * 17 * 17,
+		clust_num_ores = 1,
+		clust_size     = 1,
+		y_max          = -128,
+		y_min          = -255,
+	})
+
+	minetest.register_ore({
+		ore_type       = "scatter",
+		ore            = "ores:stone_with_adamas",
+		wherein        = "default:stone",
+		clust_scarcity = 15 * 15 * 15,
+		clust_num_ores = 1,
+		clust_size     = 1,
+		y_max          = -256,
+		y_min          = -31000,
+	})
 end
 
 
@@ -752,6 +787,41 @@ function default.register_ores()
 		y_max          = -2048,
 		y_min          = -31000,
 	})
+	
+	-- Adamas
+
+	minetest.register_ore({
+		ore_type       = "scatter",
+		ore            = "ores:stone_with_adamas",
+		wherein        = "default:stone",
+		clust_scarcity = 15 * 15 * 15,
+		clust_num_ores = 1,
+		clust_size     = 1,
+		y_max          = 31000,
+		y_min          = 1025,
+	})
+
+	minetest.register_ore({
+		ore_type       = "scatter",
+		ore            = "ores:stone_with_adamas",
+		wherein        = "default:stone",
+		clust_scarcity = 17 * 17 * 17,
+		clust_num_ores = 1,
+		clust_size     = 1,
+		y_max          = -1024,
+		y_min          = -2047,
+	})
+
+	minetest.register_ore({
+		ore_type       = "scatter",
+		ore            = "ores:stone_with_adamas",
+		wherein        = "default:stone",
+		clust_scarcity = 15 * 15 * 15,
+		clust_num_ores = 1,
+		clust_size     = 1,
+		y_max          = -2048,
+		y_min          = -31000,
+	})
 end
 
 
@@ -766,7 +836,7 @@ function default.register_mgv6_decorations()
 	-- Papyrus
 
 	minetest.register_decoration({
-		name = "default:papyrus",
+		name = "default:reeds",
 		deco_type = "simple",
 		place_on = {"ethereal:grass_dirt"},
 		sidelen = 16,
@@ -780,7 +850,7 @@ function default.register_mgv6_decorations()
 		},
 		y_max = 1,
 		y_min = 1,
-		decoration = "default:papyrus",
+		decoration = "default:reeds",
 		height = 2,
 		height_max = 4,
 		spawn_by = "default:water_source",

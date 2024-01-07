@@ -101,20 +101,8 @@ end -- END if
 --	}
 --})
 
--- Palm Wax
-minetest.register_craftitem("ethereal:palm_wax", {
-	description = S("Palm Wax"),
-	inventory_image = "palm_wax.png",
-	wield_image = "palm_wax.png"
-})
 
-minetest.register_craft({
-	type = "cooking",
-	cooktime = 10,
-	output = "ethereal:palm_wax",
-	recipe = "ethereal:palm_leaves"
-})
-
+-- Candles
 
 local function add_candle(col, dcol)
 
@@ -192,8 +180,8 @@ minetest.register_craft({
 	output = "ethereal:candle 2",
 	recipe = {
 		{"farming:string"},
-		{"ethereal:palm_wax"},
-		{"ethereal:palm_wax"}
+		{"wood:palm_wax"},
+		{"wood:palm_wax"}
 	}
 })
 
@@ -212,7 +200,7 @@ minetest.register_craft({
 	}
 })
 
--- stone Ladder
+-- Stone Ladder
 minetest.register_node("ethereal:stone_ladder", {
 	description = S("Stone Ladder"),
 	drawtype = "signlike",

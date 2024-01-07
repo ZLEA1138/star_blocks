@@ -4,30 +4,30 @@
 --= Desert Biome
 
 -- Cactus
---minetest.register_decoration({
---	deco_type = "simple",
---	place_on = {"default:desert_sand", "default:sandstone"},
---	sidelen = 16,
---	fill_ratio = 0.005,
---	biomes = {"desert", "sandstone"},
---	decoration = {
+minetest.register_decoration({
+	deco_type = "simple",
+	place_on = {"default:desert_sand", "default:sandstone"},
+	sidelen = 16,
+	fill_ratio = 0.005,
+	biomes = {"desert", "sandstone"},
+	decoration = {
 --		"xanadu:cactus_echinocereus", "xanadu:cactus_matucana",
 --		"xanadu:cactus_baseball", "xanadu:cactus_golden"
 	}
 })
 
 -- Desert Plants
---minetest.register_decoration({
---	deco_type = "simple",
---	place_on = {"default:desert_sand", "default:sandstone", "default:sand"},
---	sidelen = 16,
---	fill_ratio = 0.004,
---	biomes = {"desert", "sandstone"},
---	decoration = {
+minetest.register_decoration({
+	deco_type = "simple",
+	place_on = {"default:desert_sand", "default:sandstone", "default:sand"},
+	sidelen = 16,
+	fill_ratio = 0.004,
+	biomes = {"desert", "sandstone"},
+	decoration = {
 --		"xanadu:desert_kangaroo", "xanadu:desert_brittle",
 --		"xanadu:desert_ocotillo", "xanadu:desert_whitesage"
---	}
---})
+	}
+})
 
 --=  Prairie Biome
 
@@ -112,7 +112,7 @@ minetest.register_decoration({
 minetest.register_decoration({
 	deco_type = "simple",
 	place_on = {
-		"default:dirt_with_snow", "ethereal:cold_dirt"
+		"ethereal:snow_dirt", "ethereal:cold_dirt"
 	},
 	sidelen = 16,
 	fill_ratio = 0.005,
@@ -162,7 +162,7 @@ minetest.register_decoration({
 	place_on = {
 		"ethereal:fungus_dirt", "ethereal:grass_dirt",
 		"ethereal:cold_dirt",
-		"ethereal:dirt_with_snow", "ethereal:jungle_dirt",
+		"ethereal:snow_dirt", "ethereal:jungle_dirt",
 		"ethereal:prairie_dirt",
 		"ethereal:dry_dirt", "default:sand",
 		"default:desert_sand", "ethereal:bamboo_dirt"

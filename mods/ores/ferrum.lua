@@ -1,3 +1,5 @@
+local S = default.get_translator
+
 -- VARIABLES
 local cracky = 2
 
@@ -154,65 +156,6 @@ minetest.register_craft({
 		{"ores:ferrum_ingot", "ores:ferrum_ingot", "ores:ferrum_ingot"},
 		{"", "group:stick", ""},
 	}
-})
-
--- chest
-default.chest.register_chest("ores:chest_ferrum", {
-	description = "Ferrum Chest",
-	tiles = {
-		"chest_ferrum_top.png",
-		"chest_ferrum_top.png",
-		"chest_ferrum_side.png",
-		"chest_ferrum_side.png",
-		"chest_ferrum_front.png",
-		"chest_ferrum_inside.png"
-	},
-	sounds = default.node_sound_wood_defaults(),
-	sound_open = "default_chest_open",
-	sound_close = "default_chest_close",
-	groups = {cracky = cracky},
-})
-
-minetest.register_craft({
-	output = "ores:ferrum_ingot",
-	recipe = {
-		{"ores:ferrum_ingot", "ores:ferrum_ingot", "ores:ferrum_ingot"},
-		{"ores:ferrum_ingot", "", "ores:ferrum_ingot"},
-		{"ores:ferrum_ingot", "ores:ferrum_ingot", "ores:ferrum_ingot"},
-	}
-})
-
--- locked chest
-default.chest.register_chest("ores:chest_ferrum_locked", {
-	description = "Locked Ferrum Chest",
-	tiles = {
-		"chest_ferrum_top.png",
-		"chest_ferrum_top.png",
-		"chest_ferrum_side.png",
-		"chest_ferrum_side.png",
-		"chest_ferrum_lock.png",
-		"chest_ferrum_inside.png"
-	},
-	sounds = default.node_sound_wood_defaults(),
-	sound_open = "default_chest_open",
-	sound_close = "default_chest_close",
-	groups = {cracky = (cracky + 1), oddly_breakable_by_hand = 2},
-	protected = true,
-})
-
-minetest.register_craft({
-	output = "ores:chest_ferrum_locked",
-	recipe = {
-		{"ores:ferrum_ingot", "ores:ferrum_ingot", "ores:ferrum_ingot"},
-		{"ores:ferrum_ingot", "ores:cuprum_ingot", "ores:ferrum_ingot"},
-		{"ores:ferrum_ingot", "ores:ferrum_ingot", "ores:ferrum_ingot"},
-	}
-})
-
-minetest.register_craft( {
-	type = "shapeless",
-	output = "ores:chest_ferrum_locked",
-	recipe = {"ores:chest_ferrum", "ores:cuprum_ingot"},
 })
 
 -- ladder

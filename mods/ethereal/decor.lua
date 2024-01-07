@@ -75,8 +75,8 @@ end
 
 
 -- scorched tree
-add_node({"ethereal:dry_dirt"}, 0.006, {"plains"}, 1, 100,
-	{"wood:scorched_tree"}, 6, nil, nil, ethereal.plains)
+add_node({"ethereal:charred_dirt"}, 0.006, {"charred"}, 1, 100,
+	{"wood:scorched_tree"}, 6, nil, nil, ethereal.charred)
 
 -- dry shrub
 add_node({"ethereal:dry_dirt"}, 0.015, {"plains"}, 1, 100,

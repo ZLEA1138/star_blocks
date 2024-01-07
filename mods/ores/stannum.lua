@@ -9,7 +9,7 @@ minetest.register_node("ores:stone_with_stannum", {
 	description = "Stannum Ore",
 	tiles = {"stone.png^stannum_ore.png"},
 	groups = {cracky = cracky},
-	drop = "ores:tin_lump",
+	drop = "ores:stannum_lump",
 	sounds = default.node_sound_stone_defaults(),
 })
 

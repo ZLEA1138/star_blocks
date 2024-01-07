@@ -51,8 +51,8 @@ end
 
 local vessels_shelf_def = {
 	description = S("Vessels Shelf"),
-	tiles = {"wood.png", "wood.png", "wood.png",
-		"wood.png", "shelf_vessel.png", "shelf_vessel.png"},
+	tiles = {"tavifruit_wood.png", "tavifruit_wood.png", "tavifruit_wood.png",
+		"tavifruit_wood.png", "shelf_vessel.png", "shelf_vessel.png"},
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
@@ -173,7 +173,7 @@ minetest.register_node("vessels:ferrum_bottle", {
 })
 
 minetest.register_craft( {
-	output = "vessels:steel_bottle 5",
+	output = "vessels:ferrum_bottle 5",
 	recipe = {
 		{"ores:ferrum_ingot", "", "ores:ferrum_ingot"},
 		{"ores:ferrum_ingot", "", "ores:ferrum_ingot"},
@@ -182,7 +182,7 @@ minetest.register_craft( {
 })
 
 
--- Glass and steel recycling
+-- Glass and ferrum recycling
 
 minetest.register_craftitem("vessels:glass_fragments", {
 	description = S("Glass Fragments"),

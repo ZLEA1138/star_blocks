@@ -58,5 +58,8 @@ add_ore("ores:stone_with_cuprum", "default:desert_stone", 9*9*9, 5, 3, -31000, -
 -- Stannum (tin)
 add_ore("ores:stone_with_stannum", "default:desert_stone", 9*9*9, 5, 3, -31000, -64)
 
+-- Adamas
+add_ore("ores:stone_with_adamas", "default:desert_stone", 15*15*15, 1, 1, -31000, -64)
+
 -- Coral Sand
 --add_ore("ethereal:sandy", "default:sand", 10*10*10, 24, 4, -100, -10)

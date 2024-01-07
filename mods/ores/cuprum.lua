@@ -17,7 +17,7 @@ minetest.register_node("ores:stone_with_cuprum", {
 	description = "Cuprum Ore",
 	tiles = {"stone.png^cuprum_ore.png"},
 	groups = {cracky = cracky},
-	drop = "ores:copper_lump",
+	drop = "ores:cuprum_lump",
 	sounds = default.node_sound_stone_defaults(),
 })
 

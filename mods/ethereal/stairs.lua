@@ -56,6 +56,22 @@ do_stair(
 	{"ice_brick.png"},
 	default.node_sound_glass_defaults())
 
+minetest.override_item("stairs:stair_ice_brick", {
+	use_texture_alpha = "clip",
+})
+
+minetest.override_item("stairs:stair_inner_ice_brick", {
+	use_texture_alpha = "clip",
+})
+
+minetest.override_item("stairs:stair_outer_ice_brick", {
+	use_texture_alpha = "clip",
+})
+
+minetest.override_item("stairs:slab_ice_brick", {
+	use_texture_alpha = "clip",
+})
+
 do_stair(
 	"Snow Brick",
 	"snow_brick",
@@ -97,62 +113,6 @@ do_stair(
 	"ethereal:mushroom_cap",
 	{choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 	{"mushroom_cap.png"},
-	default.node_sound_wood_defaults())
-
-do_stair(
-	"Jogan Wood",
-	"jogan_wood",
-	"ethereal:jogan_wood",
-	{choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-	{"jogan_wood.png"},
-	default.node_sound_wood_defaults())
-
-do_stair(
-	"Pine Wood",
-	"pine_wood",
-	"ethereal:pine_wood",
-	{choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-	{"pine_wood.png"},
-	default.node_sound_wood_defaults())
-
-do_stair(
-	"Palm Wood",
-	"palm_wood",
-	"ethereal:palm_wood",
-	{choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-	{"palm_wood.png"},
-	default.node_sound_wood_defaults())
-
---do_stair(
---	"Wroshyr Wood",
---	"wroshyr_wood",
---	"ethereal:wroshyr_wood",
---	{choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
---	{"wroshyr_wood.png"},
---	default.node_sound_wood_defaults())
-
-do_stair(
-	"Brylark Wood",
-	"brylark_wood",
-	"ethereal:brylark_wood",
-	{cracky = 1, level = 2},
-	{"brylark_wood.png"},
-	default.node_sound_wood_defaults())
-
-do_stair(
-	"Uneti Wood",
-	"uneti_wood",
-	"ethereal:uneti_wood",
-	{choppy = 2, oddly_breakable_by_hand = 1, put_out_fire = 1},
-	{"uneti_wood.png"},
-	default.node_sound_wood_defaults())
-
-do_stair(
-	"Gnarltree Wood",
-	"gnarltree_wood",
-	"ethereal:gnarltree_wood",
-	{choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
-	{"gnarltree_wood.png"},
 	default.node_sound_wood_defaults())
 
 do_stair(

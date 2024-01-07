@@ -183,7 +183,7 @@ minetest.register_tool("screwdriver:screwdriver", {
 minetest.register_craft({
 	output = "screwdriver:screwdriver",
 	recipe = {
-		{"default:steel_ingot"},
+		{"ores:ferrum_ingot"},
 		{"group:stick"}
 	}
 })

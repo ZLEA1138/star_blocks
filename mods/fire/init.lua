@@ -84,9 +84,9 @@ permanent_fire_node.description = S("Permanent Fire")
 minetest.register_node("fire:permanent_flame", permanent_fire_node)
 
 -- Flint and Steel
-minetest.register_tool("fire:flint_and_steel", {
-	description = S("Flint and Steel"),
-	inventory_image = "flint_steel.png",
+minetest.register_tool("fire:flint_and_ferrum", {
+	description = S("Flint and Ferrum"),
+	inventory_image = "flint_ferrum.png",
 	sound = {breaks = "default_tool_breaks"},
 
 	on_use = function(itemstack, user, pointed_thing)
@@ -127,9 +127,9 @@ minetest.register_tool("fire:flint_and_steel", {
 })
 
 minetest.register_craft({
-	output = "fire:flint_and_steel",
+	output = "fire:flint_and_ferrum",
 	recipe = {
-		{"default:flint", "default:steel_ingot"}
+		{"default:flint", "ores:ferrum_ingot"}
 	}
 })
 

@@ -338,6 +338,16 @@ minetest.register_node("default:cave_ice", {
 -- Plantlife (non-cubic)
 --
 
+minetest.register_node("default:cactus", {
+	description = S("Cactus"),
+	tiles = {"cactus_top.png", "cactus_top.png",
+		"cactus_side.png"},
+	paramtype2 = "facedir",
+	groups = {choppy = 3},
+	sounds = default.node_sound_wood_defaults(),
+	on_place = minetest.rotate_node,
+})
+
 minetest.register_node("default:reeds", {
 	description = S("Reeds"),
 	drawtype = "plantlike",
@@ -610,77 +620,6 @@ for i = 2, 3 do
 		},
 	})
 end
-
-
-minetest.register_node("default:bush_stem", {
-	description = S("Bush Stem"),
-	drawtype = "plantlike",
-	visual_scale = 1.41,
-	tiles = {"bush_stem.png"},
-	inventory_image = "bush_stem.png",
-	wield_image = "bush_stem.png",
-	paramtype = "light",
-	sunlight_propagates = true,
-	groups = {choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
-	sounds = default.node_sound_wood_defaults(),
-	selection_box = {
-		type = "fixed",
-		fixed = {-7 / 16, -0.5, -7 / 16, 7 / 16, 0.5, 7 / 16},
-	},
-})
-
-minetest.register_node("default:bush_leaves", {
-	description = S("Bush Leaves"),
-	drawtype = "allfaces_optional",
-	tiles = {"leaves_simple.png"},
-	paramtype = "light",
-	groups = {snappy = 3, flammable = 2, leaves = 1},
-	drop = {
-		max_items = 1,
-		items = {
-			{items = {"default:bush_sapling"}, rarity = 5},
-			{items = {"default:bush_leaves"}}
-		}
-	},
-	sounds = default.node_sound_leaves_defaults(),
-
-	after_place_node = after_place_leaves,
-})
-
-minetest.register_node("default:bush_sapling", {
-	description = S("Bush Sapling"),
-	drawtype = "plantlike",
-	tiles = {"bush_sapling.png"},
-	inventory_image = "bush_sapling.png",
-	wield_image = "bush_sapling.png",
-	paramtype = "light",
-	sunlight_propagates = true,
-	walkable = false,
-	on_timer = grow_sapling,
-	selection_box = {
-		type = "fixed",
-		fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 2 / 16, 4 / 16}
-	},
-	groups = {snappy = 2, dig_immediate = 3, flammable = 2,
-		attached_node = 1, sapling = 1},
-	sounds = default.node_sound_leaves_defaults(),
-
-	on_construct = function(pos)
-		minetest.get_node_timer(pos):start(math.random(300, 1500))
-	end,
-
-	on_place = function(itemstack, placer, pointed_thing)
-		itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-			"default:bush_sapling",
-			-- minp, maxp to be checked, relative to sapling pos
-			{x = -1, y = 0, z = -1},
-			{x = 1, y = 1, z = 1},
-			-- maximum interval of interior volume check
-			2)
-
-		return itemstack
-	end,
-})
 
 
 --
@@ -1019,8 +958,8 @@ end
 
 local default_bookshelf_def = {
 	description = S("Bookshelf"),
-	tiles = {"wood.png", "wood.png", "wood.png",
-		"wood.png", "shelf_book.png", "shelf_book.png"},
+	tiles = {"tavifruit_wood.png", "tavifruit_wood.png", "tavifruit_wood.png",
+		"tavifruit_wood.png", "shelf_book.png", "shelf_book.png"},
 	paramtype2 = "facedir",
 	is_ground_content = false,
 	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},

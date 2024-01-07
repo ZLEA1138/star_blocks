@@ -229,11 +229,14 @@ function default.grow_papyrus(pos, node)
 	pos.y = pos.y - 1
 	local name = minetest.get_node(pos).name
 	if name ~= "default:dirt" and
-			name ~= "default:dirt_with_grass" and
-			name ~= "default:dirt_with_dry_grass" and
-			name ~= "default:dirt_with_rainforest_litter" and
-			name ~= "default:dry_dirt" and
-			name ~= "default:dry_dirt_with_dry_grass" then
+			name ~= "ethereal:grass_dirt" and
+			name ~= "ethereal:jungle_dirt" and
+			name ~= "ethereal:dry_dirt" and
+			name ~= "ethereal:bamboo_dirt" and
+			name ~= "ethereal:prairie_dirt" and
+			name ~= "ethereal:fungus_dirt" and
+			name ~= "ethereal:swamp_dirt" and
+			name ~= "ethereal:savanna_dirt" then
 		return
 	end
 	if not minetest.find_node_near(pos, 3, {"group:water"}) then
@@ -241,7 +244,7 @@ function default.grow_papyrus(pos, node)
 	end
 	pos.y = pos.y + 1
 	local height = 0
-	while node.name == "default:papyrus" and height < 4 do
+	while node.name == "default:reeds" and height < 4 do
 		height = height + 1
 		pos.y = pos.y + 1
 		node = minetest.get_node(pos)
@@ -252,7 +255,7 @@ function default.grow_papyrus(pos, node)
 	if minetest.get_node_light(pos) < 13 then
 		return
 	end
-	minetest.set_node(pos, {name = "default:papyrus"})
+	minetest.set_node(pos, {name = "default:reeds"})
 	return true
 end
 
@@ -268,18 +271,21 @@ minetest.register_abm({
 })
 
 minetest.register_abm({
-	label = "Grow papyrus",
-	nodenames = {"default:papyrus"},
-	-- Grows on the dirt and surface dirt nodes of the biomes papyrus appears in,
+	label = "Grow reeds",
+	nodenames = {"default:reeds"},
+	-- Grows on the dirt and surface dirt nodes of the biomes reeds appear in,
 	-- including the old savanna nodes.
 	-- 'default:dirt_with_grass' is here only because it was allowed before.
 	neighbors = {
 		"default:dirt",
-		"default:dirt_with_grass",
-		"default:dirt_with_dry_grass",
-		"default:dirt_with_rainforest_litter",
-		"default:dry_dirt",
-		"default:dry_dirt_with_dry_grass",
+		"ethereal:grass_dirt",
+		"ethereal:jungle_dirt",
+		"ethereal:dry_dirt",
+		"ethereal:bamboo_dirt",
+		"ethereal:prairie_dirt",
+		"ethereal:fungus_dirt",
+		"ethereal:swamp_dirt",
+		"ethereal:savanna_dirt",
 	},
 	interval = 14,
 	chance = 71,
@@ -385,8 +391,8 @@ function default.register_fence_rail(name, def)
 		}
 	})
 
-	local fence_rail_texture = "default_fence_rail_overlay.png^" .. def.texture ..
-			"^default_fence_rail_overlay.png^[makealpha:255,126,126"
+	local fence_rail_texture = "fence_rail_overlay.png^" .. def.texture ..
+			"^fence_rail_overlay.png^[makealpha:255,126,126"
 	-- Allow almost everything to be overridden
 	local default_fields = {
 		paramtype = "light",
@@ -453,8 +459,8 @@ function default.register_mesepost(name, def)
 		}
 	})
 
-	local post_texture = def.texture .. "^default_mese_post_light_side.png^[makealpha:0,0,0"
-	local post_texture_dark = def.texture .. "^default_mese_post_light_side_dark.png^[makealpha:0,0,0"
+	local post_texture = def.texture .. "^mese_post_light_side.png^[makealpha:0,0,0"
+	local post_texture_dark = def.texture .. "^mese_post_light_side_dark.png^[makealpha:0,0,0"
 	-- Allow almost everything to be overridden
 	local default_fields = {
 		wield_image = post_texture,
@@ -615,11 +621,11 @@ minetest.register_abm({
 		local name = minetest.get_node(above).name
 		-- Snow check is cheapest, so comes first
 		if name == "default:snow" then
-			minetest.set_node(pos, {name = "default:dirt_with_snow"})
+			minetest.set_node(pos, {name = "ethereal:snow_dirt"})
 		elseif minetest.get_item_group(name, "grass") ~= 0 then
-			minetest.set_node(pos, {name = "default:dirt_with_grass"})
+			minetest.set_node(pos, {name = "ethereal:grass_dirt"})
 		elseif minetest.get_item_group(name, "dry_grass") ~= 0 then
-			minetest.set_node(pos, {name = "default:dirt_with_dry_grass"})
+			minetest.set_node(pos, {name = "ethereal:savanna_dirt"})
 		end
 	end
 })
@@ -631,7 +637,7 @@ minetest.register_abm({
 
 minetest.register_abm({
 	label = "Grass covered",
-	nodenames = {"group:spreading_dirt_type", "default:dry_dirt_with_dry_grass"},
+	nodenames = {"group:spreading_dirt_type", "ethereal:savanna_dirt"},
 	interval = 8,
 	chance = 50,
 	catch_up = false,
@@ -642,8 +648,8 @@ minetest.register_abm({
 		if name ~= "ignore" and nodedef and not ((nodedef.sunlight_propagates or
 				nodedef.paramtype == "light") and
 				nodedef.liquidtype == "none") then
-			if node.name == "default:dry_dirt_with_dry_grass" then
-				minetest.set_node(pos, {name = "default:dry_dirt"})
+			if node.name == "ethereal:savanna_dirt" then
+				minetest.set_node(pos, {name = "ethereal:dry_dirt"})
 			else
 				minetest.set_node(pos, {name = "default:dirt"})
 			end
@@ -657,12 +663,12 @@ minetest.register_abm({
 --
 
 local moss_correspondences = {
-	["default:cobble"] = "default:mossycobble",
-	["stairs:slab_cobble"] = "stairs:slab_mossycobble",
-	["stairs:stair_cobble"] = "stairs:stair_mossycobble",
-	["stairs:stair_inner_cobble"] = "stairs:stair_inner_mossycobble",
-	["stairs:stair_outer_cobble"] = "stairs:stair_outer_mossycobble",
-	["walls:cobble"] = "walls:mossycobble",
+	["default:cobble"] = "default:cobble_mossy",
+	["stairs:slab_cobble"] = "stairs:slab_cobble_mossy",
+	["stairs:stair_cobble"] = "stairs:stair_cobble_mossy",
+	["stairs:stair_inner_cobble"] = "stairs:stair_inner_cobble_mossy",
+	["stairs:stair_outer_cobble"] = "stairs:stair_outer_cobble_mossy",
+	["walls:cobble"] = "walls:cobble_mossy",
 }
 minetest.register_abm({
 	label = "Moss growth",

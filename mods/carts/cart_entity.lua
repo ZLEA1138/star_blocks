@@ -423,7 +423,7 @@ minetest.register_craftitem("carts:cart", {
 minetest.register_craft({
 	output = "carts:cart",
 	recipe = {
-		{"default:steel_ingot", "", "default:steel_ingot"},
-		{"default:steel_ingot", "default:steel_ingot", "default:steel_ingot"},
+		{"ores:ferrum_ingot", "", "ores:ferrum_ingot"},
+		{"ores:ferrum_ingot", "ores:ferrum_ingot", "ores:ferrum_ingot"},
 	},
 })

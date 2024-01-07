@@ -2,6 +2,7 @@ ores = {}
 
 local path = minetest.get_modpath("ores")
 
+dofile(path .. "/adamas.lua")
 dofile(path .. "/aurum.lua")
 dofile(path .. "/wolfram.lua")
 dofile(path .. "/coal.lua")

@@ -20,9 +20,9 @@ farming.register_hoe(":farming:hoe_stone", {
 })
 
 farming.register_hoe(":farming:hoe_ferrum", {
-	description = S("Steel Hoe"),
-	inventory_image = "hoe_steel.png",
+	description = S("Ferrum Hoe"),
+	inventory_image = "hoe_ferrum.png",
 	max_uses = 500,
-	material = "default:steel_ingot",
+	material = "ores:ferrum_ingot",
 	groups = {hoe = 1}
 })

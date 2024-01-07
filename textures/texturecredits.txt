@@ -1,0 +1,4 @@
+The default texture pack of Star Blocks is PixelPerfection by sofar and Hugh "XSSheep" Rutland (https://content.minetest.net/packages/sofar/pixelperfection/), with missing textures from MineClone2 by Wuzzy (https://content.minetest.net/packages/Wuzzy/mineclone2/).
+
+Trooper textures are based on Clone Trooper by PunkinPie
+ (https://www.minecraftskins.com/skin/22223423/clone-trooper/).

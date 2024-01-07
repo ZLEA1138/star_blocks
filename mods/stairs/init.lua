@@ -457,17 +457,6 @@ end
 -- Register default stairs and slabs
 
 my_register_stair_and_slab(
-	"wood",
-	"default:wood",
-	{choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
-	{"wood.png"},
-	"Wooden Stair",
-	"Wooden Slab",
-	default.node_sound_wood_defaults(),
-	false
-)
-
-my_register_stair_and_slab(
 	"stone",
 	"default:stone",
 	{cracky = 3},
@@ -719,6 +708,22 @@ my_register_stair_and_slab(
 	default.node_sound_ice_defaults(),
 	true
 )
+
+minetest.override_item("stairs:stair_ice", {
+	use_texture_alpha = "clip",
+})
+
+minetest.override_item("stairs:stair_inner_ice", {
+	use_texture_alpha = "clip",
+})
+
+minetest.override_item("stairs:stair_outer_ice", {
+	use_texture_alpha = "clip",
+})
+
+minetest.override_item("stairs:slab_ice", {
+	use_texture_alpha = "clip",
+})
 
 my_register_stair_and_slab(
 	"snow_block",
