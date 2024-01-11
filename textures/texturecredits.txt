@@ -1,4 +1,5 @@
-The default texture pack of Star Blocks is PixelPerfection by sofar and Hugh "XSSheep" Rutland (https://content.minetest.net/packages/sofar/pixelperfection/), with missing textures from MineClone2 by Wuzzy (https://content.minetest.net/packages/Wuzzy/mineclone2/).
+The texture pack for Star Blocks is PixelPerfection by sofar and Hugh "XSSheep" Rutland (https://content.minetest.net/packages/sofar/pixelperfection/).  Many missing textures are from MineClone2 by Wuzzy (https://content.minetest.net/packages/Wuzzy/mineclone2/).
 
-Trooper textures are based on Clone Trooper by PunkinPie
- (https://www.minecraftskins.com/skin/22223423/clone-trooper/).
+Trooper texture is based on Clone Trooper by PunkinPie (https://www.minecraftskins.com/skin/22223423/clone-trooper/).
+
+Wolfram armor is based on jedi mandalorian by DarkShadow6150 (https://www.minecraftskins.com/skin/22122035/jedi-mandalorian/).

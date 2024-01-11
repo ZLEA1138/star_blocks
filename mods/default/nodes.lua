@@ -215,13 +215,6 @@ minetest.register_node("default:dirt", {
 	sounds = default.node_sound_dirt_defaults(),
 })
 
-minetest.register_node("default:dry_dirt", {
-	description = S("Savanna Dirt"),
-	tiles = {"dry_dirt.png"},
-	groups = {crumbly = 3, soil = 1},
-	sounds = default.node_sound_dirt_defaults(),
-})
-
 minetest.register_node("default:sand", {
 	description = S("Sand"),
 	tiles = {"sand.png"},

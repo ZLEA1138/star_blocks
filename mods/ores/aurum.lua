@@ -9,7 +9,7 @@ minetest.register_node("ores:stone_with_aurum", {
 	description = "Aurum Ore",
 	tiles = {"stone.png^aurum_ore.png"},
 	groups = {cracky = cracky},
-	drop = "ores:aurodium_lump",
+	drop = "ores:aurum_lump",
 	sounds = default.node_sound_stone_defaults(),
 })
 
