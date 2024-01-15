@@ -1158,7 +1158,7 @@ function default.register_decorations()
 			persist = 0.0,
 			flags = "absvalue, eased"
 		},
-		biomes = {"coniferous_forest_dunes", "grassland_dunes"},
+		biomes = {"junglee_ocean", "grassytwo_ocean"},
 		y_max = 6,
 		y_min = 4,
 		decoration = {

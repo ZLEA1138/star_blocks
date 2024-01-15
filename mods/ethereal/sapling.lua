@@ -70,12 +70,12 @@ end
 local path = minetest.get_modpath("ethereal") .. "/schematics/"
 
 -- grow tree functions
-function ethereal.grow_uneti_tree(pos)
-	add_tree(pos, 4, 0, 4, ethereal.uneti_tree)
+function ethereal.grow_sana_tree(pos)
+	add_tree(pos, 4, 0, 4, ethereal.sana_tree)
 end
 
-function ethereal.grow_brylark_tree(pos)
-	add_tree(pos, 4, 0, 4, ethereal.brylark_tree)
+function ethereal.grow_ferrumwood_tree(pos)
+	add_tree(pos, 4, 0, 4, ethereal.ferrumwood_tree)
 end
 
 function ethereal.grow_mushroom_tree(pos)
@@ -86,12 +86,12 @@ function ethereal.grow_palm_tree(pos)
 	add_tree(pos, 4, 0, 4, ethereal.palm_tree)
 end
 
-function ethereal.grow_wroshyr_tree(pos)
-	add_tree(pos, 7, 0, 7, ethereal.wroshyr_tree)
+function ethereal.grow_oki_tree(pos)
+	add_tree(pos, 7, 0, 7, ethereal.oki_tree)
 end
 
-function ethereal.grow_jogan_tree(pos)
-	add_tree(pos, 1, 0, 1, ethereal.jogan_tree)
+function ethereal.grow_tavifruit_tree(pos)
+	add_tree(pos, 1, 0, 1, ethereal.tavifruit_tree)
 end
 
 function ethereal.grow_bamboo_tree(pos)
@@ -102,8 +102,8 @@ function ethereal.grow_pine_tree(pos)
 	add_tree(pos, 3, 0, 3, ethereal.pine_tree)
 end
 
-function ethereal.grow_gnarltree(pos)
-	add_tree(pos, 3, 0, 3, ethereal.gnarl_tree)
+function ethereal.grow_marshtree(pos)
+	add_tree(pos, 3, 0, 3, ethereal.marshtree)
 end
 
 function ethereal.grow_bush(pos)
@@ -144,15 +144,15 @@ local grow_sapling = function(pos, node)
 	end
 
 	-- Check if Ethereal Sapling is growing on correct substrate
-	if node.name == "wood:uneti_tree_sapling"
+	if node.name == "wood:sana_tree_sapling"
 	and minetest.get_item_group(under, "soil") > 0 then
 		ethereal.grow_uneti_tree(pos)
 
-	elseif node.name == "wood:jogan_tree_sapling"
+	elseif node.name == "wood:tavifruit_tree_sapling"
 	and minetest.get_item_group(under, "soil") > 0 then
 		ethereal.grow_jogan_tree(pos)
 
-	elseif node.name == "wood:brylark_tree_sapling"
+	elseif node.name == "wood:ferrumwood_tree_sapling"
 	and minetest.get_item_group(under, "soil") > 0 then
 		ethereal.grow_brylark_tree(pos)
 
@@ -164,7 +164,7 @@ local grow_sapling = function(pos, node)
 	and under == "default:sand" then
 		ethereal.grow_palm_tree(pos)
 
-	elseif node.name == "wood:wroshyr_sapling"
+	elseif node.name == "wood:oki_sapling"
 	and minetest.get_item_group(under, "soil") > 0 then
 		ethereal.grow_wroshyr_tree(pos)
 
@@ -176,7 +176,7 @@ local grow_sapling = function(pos, node)
 	and under == "ethereal:bamboo_dirt" then
 		ethereal.grow_bamboo_tree(pos)
 
-	elseif node.name == "wood:gnarltree_sapling"
+	elseif node.name == "wood:marshtree_sapling"
 	and minetest.get_item_group(under, "soil") > 0 then
 		ethereal.grow_gnarltree_tree(pos)
 
