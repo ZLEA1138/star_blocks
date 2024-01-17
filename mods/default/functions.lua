@@ -225,7 +225,7 @@ function default.grow_cactus(pos, node)
 	return true
 end
 
-function default.grow_papyrus(pos, node)
+function default.grow_reeds(pos, node)
 	pos.y = pos.y - 1
 	local name = minetest.get_node(pos).name
 	if name ~= "default:dirt" and
@@ -290,7 +290,7 @@ minetest.register_abm({
 	interval = 14,
 	chance = 71,
 	action = function(...)
-		default.grow_papyrus(...)
+		default.grow_reeds(...)
 	end
 })
 
