@@ -3,3 +3,22 @@ default:ultrasonic_generator
 
 ===Uses===
 vessels:ferrum_bottle
+
+===Tools===
+CR-12 Shotgun (Civilian model)
+CR-15 Rifle (Civilian model)
+FR-20 Rotary Cannon (Old Federation model)
+FC-37 Carbine (Old Federation model)
+CFC-38 RCWS (Reconfigurable Weapon System) (Old Federation commando model)
+FC-53 Carbine (Old Federation model)
+	High Power
+	Training
+FP-19 Pistol (Federation model)
+VFP-1118 Rifle (Fremian model)
+VFS-2205 Pistol (Fremian model)
+
+===Armors===
+Federation Trooper
+Antique Federation Trooper
+Antique Federation Commando
+Fremian (wolfram)

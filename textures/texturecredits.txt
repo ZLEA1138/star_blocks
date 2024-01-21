@@ -3,3 +3,5 @@ The texture pack for Star Blocks is PixelPerfection by sofar and Hugh "XSSheep" 
 Trooper texture is based on Clone Trooper by PunkinPie (https://www.minecraftskins.com/skin/22223423/clone-trooper/).
 
 Wolfram armor is based on jedi mandalorian by DarkShadow6150 (https://www.minecraftskins.com/skin/22122035/jedi-mandalorian/).
+
+NPC skins from Villagers for Minetest by ErrorNull (https://forum.minetest.net/viewtopic.php?t=17915).

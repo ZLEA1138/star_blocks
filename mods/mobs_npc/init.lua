@@ -39,7 +39,7 @@ end
 
 -- NPCs
 dofile(path .. "npc.lua") -- TenPlus1
---dofile(path .. "trader.lua")
+dofile(path .. "trader.lua")
 
 
 -- Load custom spawning

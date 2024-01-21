@@ -17,7 +17,7 @@ mobs:register_mob("mobs_trooper:trooper", {
 	arrow = "mobs_trooper:laser_red",
 	shoot_interval = 1.5,
 	shoot_offset = 1.5,
-	hp_min = 4,
+	hp_min = 20,
 	hp_max = 20,
 	armor = 100,
 	collisionbox = {-0.4, -1, -0.4, 0.4, 0.8, 0.4},
@@ -37,7 +37,7 @@ mobs:register_mob("mobs_trooper:trooper", {
 	jump = true,
 	floats = 0,
 	drops = {
-		--{name = "rangedweapons:e11", chance = 1, min = 0, max = 1}
+		{name = "rangedweapons:f53", chance = 1, min = 0, max = 1}
 	},
 	water_damage = 0,
 	lava_damage = 4,
@@ -106,7 +106,7 @@ mobs:spawn({
 --	sounds = default.node_sound_stone_defaults()
 --})
 
-mobs:register_egg("mobs_trooper:trooper", "Imperial Trooper", "baked_clay_black.png", 1)
+mobs:register_egg("mobs_trooper:trooper", "Federation Trooper", "baked_clay_black.png", 1)
 
 mobs:alias_mob("mobs:trooper", "mobs_trooper:trooper") -- compatibility
 

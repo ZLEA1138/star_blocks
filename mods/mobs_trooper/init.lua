@@ -39,7 +39,7 @@ end
 
 -- Imperials
 dofile(path .. "trooper.lua")
---dofile(path .. "imperial_officer.lua")
+--dofile(path .. "federation_officer.lua")
 
 
 -- Load custom spawning

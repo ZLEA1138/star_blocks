@@ -3,40 +3,65 @@ local S = mobs.intllib_npc
 
 -- define table containing names for use and shop items for sale
 
-mobs.human = {
-
-	names = {
-		"Bob", "Duncan", "Bill", "Tom", "James", "Ian", "Lenny",
-		"Dylan", "Ethan"
-	},
-
+mobs.tavin_food = {
+--	names = {
+--		"Bob", "Duncan", "Bill", "Tom", "James", "Ian", "Lenny",
+--		"Dylan", "Ethan"
+--	},
 	items = {
 		--{item for sale, price, chance of appearing in trader's inventory}
-		{"default:apple 10", "default:gold_ingot 2", 10},
-		{"farming:bread 10", "default:gold_ingot 4", 5},
-		{"default:clay 10", "default:gold_ingot 2", 12},
-		{"default:brick 10", "default:gold_ingot 4", 17},
-		{"default:glass 10", "default:gold_ingot 4", 17},
-		{"default:obsidian 10", "default:gold_ingot 15", 50},
-		{"default:diamond 1", "default:gold_ingot 5", 40},
-		{"farming:wheat 10", "default:gold_ingot 2", 17},
-		{"default:tree 5", "default:gold_ingot 4", 20},
-		{"default:stone 10", "default:gold_ingot 8", 17},
-		{"default:desert_stone 10", "default:gold_ingot 8", 27},
-		{"default:sapling 1", "default:gold_ingot 1", 7},
-		{"default:pick_steel 1", "default:gold_ingot 2", 7},
-		{"default:sword_steel 1", "default:gold_ingot 2", 17},
-		{"default:shovel_steel 1", "default:gold_ingot 1", 17},
-		{"default:cactus 2", "default:gold_ingot 2", 40},
-		{"default:papyrus 2", "default:gold_ingot 2", 40},
-		{"default:mese_crystal_fragment 1", "default:dirt_with_grass 10", 90},
-		{"default:mese_crystal_fragment 1", "default:gold_ingot 5", 90},
+		{"wood:tavifruit 10", "simplecoins:coin_federation 2", 10},
+		{"farming:bread 10", "simplecoins:coin_federation 4", 5},
+		{"farming:wheat 10", "simplecoins:coin_federation 2", 10},
+		{"bonemeal:gelatin_powder 2", "simplecoins:coin_federation 2", 15},
+		{"flowers:mushroom_red 2", "simplecoins:coin_federation 2", 10},
+		{"flowers:mushroom_brown 2", "simplecoins:coin_federation 2", 10},
+		{"ethereal:fern_tubers 2", "simplecoins:coin_federation 2", 15},
+		{"farming:corn 2", "simplecoins:coin_federation 2", 10},
+		{"farming:rice 2", "simplecoins:coin_federation 2", 10},
+		{"farming:ruberberries 2", "simplecoins:coin_federation 2", 10},
+		{"farming:sugar 2", "simplecoins:coin_federation 2", 15},
+		{"farming:salt 2", "simplecoins:coin_federation 2", 15},
+	}
+}
+
+mobs.tavin_weapon = {
+	items = {
+		--{item for sale, price, chance of appearing in trader's inventory}
+		{"wood:tavifruit 10", "simplecoins:coin_federation 2", 10},
+		{"farming:bread 10", "simplecoins:coin_federation 4", 5},
+		{"default:clay 10", "simplecoins:coin_federation 2", 12},
+		{"default:brick 10", "simplecoins:coin_federation 4", 17},
+		{"default:glass 10", "simplecoins:coin_federation 4", 17},
+		{"rangedweapons:fc37 1", "simplecoins:coin_federation 15", 20},
+		{"farming:wheat 10", "simplecoins:coin_federation 2", 17},
+		{"default:stone 10", "simplecoins:coin_federation 8", 17},
+		{"default:desert_stone 10", "simplecoins:coin_federation 8", 27},
+		{"default:cactus 2", "simplecoins:coin_federation 2", 40},
+		{"default:reeds 2", "simplecoins:coin_federation 2", 40},
+	}
+}
+
+mobs.tavin_antique = {
+	items = {
+		--{item for sale, price, chance of appearing in trader's inventory}
+		{"wood:tavifruit 10", "simplecoins:coin_federation 2", 10},
+		{"farming:bread 10", "simplecoins:coin_federation 4", 5},
+		{"default:clay 10", "simplecoins:coin_federation 2", 12},
+		{"default:brick 10", "simplecoins:coin_federation 4", 17},
+		{"default:glass 10", "simplecoins:coin_federation 4", 17},
+		{"rangedweapons:fc37 1", "simplecoins:coin_federation 15", 20},
+		{"farming:wheat 10", "simplecoins:coin_federation 2", 17},
+		{"default:stone 10", "simplecoins:coin_federation 8", 17},
+		{"default:desert_stone 10", "simplecoins:coin_federation 8", 27},
+		{"default:cactus 2", "simplecoins:coin_federation 2", 40},
+		{"default:reeds 2", "simplecoins:coin_federation 2", 40},
 	}
 }
 
 -- Trader ( same as NPC but with right-click shop )
 
-mobs:register_mob("mobs_npc:trader", {
+mobs:register_mob("mobs_npc:trader_food", {
 	type = "npc",
 	passive = false,
 	damage = 3,
@@ -53,8 +78,6 @@ mobs:register_mob("mobs_npc:trader", {
 	mesh = "mobs_character.b3d",
 	textures = {
 		{"mobs_trader.png"}, -- by Frerin
-		{"mobs_trader2.png"},
-		{"mobs_trader3.png"},
 	},
 	makes_footstep_sound = true,
 	sounds = {},
@@ -65,7 +88,7 @@ mobs:register_mob("mobs_npc:trader", {
 	water_damage = 0,
 	lava_damage = 4,
 	light_damage = 0,
-	follow = {"default:diamond"},
+	follow = {"ores:aurem_ingot"},
 	view_range = 15,
 	owner = "",
 	order = "stand",
@@ -85,12 +108,12 @@ mobs:register_mob("mobs_npc:trader", {
 
 	on_rightclick = function(self, clicker)
 		self.attack = nil
-		mobs_trader(self, clicker, mobs.human)
+		mobs_trader(self, clicker, mobs.tavin_food)
 	end,
 
 	on_spawn = function(self)
 
-		self.nametag = S("Trader")
+		self.nametag = S("Food Trader")
 
 		self.object:set_properties({
 			nametag = self.nametag,
@@ -185,8 +208,9 @@ function mobs_trader(self, clicker, race)
 
 	if not self.game_name then
 
-		self.game_name = tostring(race.names[math.random(1, #race.names)])
-		self.nametag = S("Trader @1", self.game_name)
+--		self.game_name = tostring(race.names[math.random(1, #race.names)])
+--		self.nametag = S("Trader @1", self.game_name)
+		self.nametag = S("Food Trader")
 
 		self.object:set_properties({
 			nametag = self.nametag,
@@ -201,8 +225,7 @@ function mobs_trader(self, clicker, race)
 	local player = clicker:get_player_name() or ""
 
 	minetest.chat_send_player(player,
-		S("[NPC] <Trader @1> Hello, @2, have a look at my wares.",
-		self.game_name, player))
+		S("[NPC] <Food Trader> Hello, @1, you look hungry.", player))
 
 	-- Make formspec trade list
 	local formspec_trade_list = ""
@@ -232,7 +255,7 @@ function mobs_trader(self, clicker, race)
 	minetest.show_formspec(player, "mobs_npc:trade", "size[8,10]"
 		.. default.gui_bg_img
 		.. default.gui_slots
-		.. "label[0.5,-0.1;" .. S("Trader @1's stock:", self.game_name) .. "]"
+		.. "label[0.5,-0.1;" .. S("Food Trader's stock:") .. "]"
 		.. formspec_trade_list
 		.. "list[current_player;main;0,6;8,4;]"
 	)

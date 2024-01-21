@@ -1,0 +1,92 @@
+minetest.register_tool("rangedweapons:fc53", {
+	wield_scale = {x=1.75,y=1.75,z=1.20},
+		description = "" ..core.colorize("#35cdff", "FC-53 Carbine\n")
+						.. core.colorize("#35cdff", "Mode: Lethal\n")
+						.. core.colorize("#FFFFFF", "Ranged damage: 5\n")
+						.. core.colorize("#FFFFFF", "Accuracy: 85%\n")
+						.. core.colorize("#FFFFFF", "Knockback: 0\n")
+						.. core.colorize("#FFFFFF", "Critical chance: 9%\n")
+						.. core.colorize("#FFFFFF", "Critical efficiency: 2.0x\n")
+						.. core.colorize("#FFFFFF", "Rate of fire: 0.25\n")
+						.. core.colorize("#FFFFFF", "Enemy penetration: 40%\n")
+						.. core.colorize("#27a600", "Right click to change mode"),
+	range = 0,
+	weapon_zoom = 18,
+    RW_powergun_capabilities = {
+		automatic_gun = 1,
+		power_damage = {fleshy=7,knockback=0},
+		power_crit = 9,
+		power_critEffc = 2.0,
+		power_cooling = "rangedweapons:fc53",
+		power_velocity = 60,
+		power_accuracy = 85,
+		power_cooldown = 0.25,
+		power_projectiles = 1,
+		power_sound = "laser1",
+		power_glass_breaking = 1,
+		power_door_breaking = 1,
+		power_dps = 0,
+		power_mob_penetration = 40,
+		power_node_penetration = 0,
+		power_consumption = 0,
+		power_entity = "rangedweapons:shot_bullet",
+		power_visual = "wielditem",
+		power_texture = "rangedweapons:laser_bolt_red",
+		power_projectile_size = 0.075,
+		has_sparks = 0,
+		ignites_explosives = 1,
+	},
+	inventory_image = "fc53.png",
+	on_secondary_use = function(itemstack,player)
+		minetest.sound_play("rangedweapons_handgun_mag_out", {player})
+		itemstack:replace("rangedweapons:fc53_training")
+		return itemstack
+	end
+})
+
+minetest.register_tool("rangedweapons:fc53_training", {
+	wield_scale = {x=1.75,y=1.75,z=1.20},
+		description = "" ..core.colorize("#35cdff", "FC-53 Carbine\n")
+						.. core.colorize("#35cdff", "Mode: Training\n")
+						.. core.colorize("#FFFFFF", "Ranged damage: 1\n")
+						.. core.colorize("#FFFFFF", "Accuracy: 85%\n")
+						.. core.colorize("#FFFFFF", "Knockback: 0\n")
+						.. core.colorize("#FFFFFF", "Critical chance: 9%\n")
+						.. core.colorize("#FFFFFF", "Critical efficiency: 2.0x\n")
+						.. core.colorize("#FFFFFF", "Rate of fire: 0.25\n")
+						.. core.colorize("#FFFFFF", "Enemy penetration: 40%\n")
+						.. core.colorize("#27a600", "Right click to change mode"),
+	range = 0,
+	weapon_zoom = 18,
+    RW_powergun_capabilities = {
+		automatic_gun = 1,
+		power_damage = {fleshy=1,knockback=0},
+		power_crit = 9,
+		power_critEffc = 2.0,
+		power_cooling = "rangedweapons:fc53_training",
+		power_velocity = 60,
+		power_accuracy = 85,
+		power_cooldown = 0.25,
+		power_projectiles = 1,
+		power_sound = "laser1",
+		power_glass_breaking = 1,
+		power_door_breaking = 1,
+		power_dps = 0,
+		power_mob_penetration = 40,
+		power_node_penetration = 0,
+		power_consumption = 0,
+		power_entity = "rangedweapons:shot_bullet",
+		power_visual = "wielditem",
+		power_texture = "rangedweapons:laser_bolt_red_training",
+		power_projectile_size = 0.075,
+		has_sparks = 0,
+		ignites_explosives = 0,
+	},
+	inventory_image = "fc53_training.png",
+	groups = {not_in_creative_inventory = 1},
+	on_secondary_use = function(itemstack,player)
+		minetest.sound_play("rangedweapons_handgun_mag_out", {player})
+		itemstack:replace("rangedweapons:fc53")
+		return itemstack
+	end
+})
