@@ -15,8 +15,8 @@ if not farming.mcl then
 	minetest.register_craft({
 		output = "farming:bowl 4",
 		recipe = {
-			{"group:wood", "", "group:wood"},
-			{"", "group:wood", ""}
+			{"group:wood", "",           "group:wood"},
+			{"",           "group:wood", ""}
 		}
 	})
 end
@@ -38,8 +38,8 @@ minetest.register_craftitem("farming:saucepan", {
 minetest.register_craft({
 	output = "farming:saucepan",
 	recipe = {
-		{"ores:ferrum_ingot", "", ""},
-		{"", "group:stick", ""}
+		{"ores:ferrum_ingot", ""},
+		{"",                  "group:stick"}
 	}
 })
 
@@ -55,7 +55,7 @@ minetest.register_craft({
 	output = "farming:pot",
 	recipe = {
 		{"group:stick", "ores:ferrum_ingot", "ores:ferrum_ingot"},
-		{"", "ores:ferrum_ingot", "ores:ferrum_ingot"}
+		{"",            "ores:ferrum_ingot", "ores:ferrum_ingot"}
 	}
 })
 
@@ -71,7 +71,7 @@ minetest.register_craft({
 	output = "farming:baking_tray",
 	recipe = {
 		{a.clay_brick, a.clay_brick, a.clay_brick},
-		{a.clay_brick, "", a.clay_brick},
+		{a.clay_brick, "",           a.clay_brick},
 		{a.clay_brick, a.clay_brick, a.clay_brick}
 	}
 })
@@ -87,9 +87,9 @@ minetest.register_craftitem("farming:skillet", {
 minetest.register_craft({
 	output = "farming:skillet",
 	recipe = {
-		{"ores:ferrum_ingot", "", ""},
-		{"", "ores:ferrum_ingot", ""},
-		{"", "", "group:stick"}
+		{"ores:ferrum_ingot", "",                  ""},
+		{"",                  "ores:ferrum_ingot", ""},
+		{"",                  "",                  "group:stick"}
 	}
 })
 
@@ -105,7 +105,7 @@ minetest.register_craft({
 	output = "farming:mortar_pestle",
 	recipe = {
 		{a.stone, "group:stick", a.stone},
-		{"", a.stone, ""}
+		{"",      a.stone,       ""}
 	}
 })
 
@@ -120,9 +120,9 @@ minetest.register_craftitem("farming:cutting_board", {
 minetest.register_craft({
 	output = "farming:cutting_board",
 	recipe = {
-		{"ores:ferrum_ingot", "", ""},
-		{"", "group:stick", ""},
-		{"", "", "group:wood"}
+		{"ores:ferrum_ingot", "",            ""},
+		{"",                  "group:stick", ""},
+		{"",                  "",            "group:wood"}
 	}
 })
 
@@ -137,8 +137,8 @@ minetest.register_craftitem("farming:juicer", {
 minetest.register_craft({
 	output = "farming:juicer",
 	recipe = {
-		{"", a.stone, ""},
-		{a.stone, "", a.stone}
+		{"",      a.stone, ""},
+		{a.stone, "",      a.stone}
 	}
 })
 
@@ -154,7 +154,7 @@ minetest.register_craft({
 	output = "farming:mixing_bowl",
 	recipe = {
 		{a.glass, "group:stick", a.glass},
-		{"", a.glass, ""}
+		{"",      a.glass,       ""}
 	}
 })
 

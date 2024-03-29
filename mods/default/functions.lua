@@ -386,7 +386,7 @@ function default.register_fence_rail(name, def)
 		output = name .. " 16",
 		recipe = {
 			{ def.material, def.material },
-			{ "", ""},
+			{ "",           ""},
 			{ def.material, def.material },
 		}
 	})
@@ -453,9 +453,9 @@ function default.register_mesepost(name, def)
 	minetest.register_craft({
 		output = name .. " 4",
 		recipe = {
-			{'', 'default:glass', ''},
+			{'',                     'default:glass',        ''},
 			{'default:mese_crystal', 'default:mese_crystal', 'default:mese_crystal'},
-			{'', def.material, ''},
+			{'',                     def.material,           ''},
 		}
 	})
 

@@ -108,9 +108,9 @@ for name, mat in pairs(craft_ingreds) do
 	minetest.register_craft({
 		output = "default:pick_".. name,
 		recipe = {
-			{mat, mat, mat},
-			{"", "group:stick", ""},
-			{"", "group:stick", ""}
+			{mat, mat,           mat},
+			{"",  "group:stick", ""},
+			{"",  "group:stick", ""}
 		}
 	})
 
@@ -128,7 +128,7 @@ for name, mat in pairs(craft_ingreds) do
 		recipe = {
 			{mat, mat},
 			{mat, "group:stick"},
-			{"", "group:stick"}
+			{"",  "group:stick"}
 		}
 	})
 

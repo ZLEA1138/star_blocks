@@ -385,7 +385,8 @@ end
 minetest.register_entity("carts:cart", cart_entity)
 
 minetest.register_craftitem("carts:cart", {
-	description = S("Cart") .. "\n" .. S("(Sneak+Click to pick up)"),
+	description = S("Cart") .. "\n"
+				.. core.colorize("#B0C4DE", "Sneak+Click to pick up"),
 	inventory_image = minetest.inventorycube("cart_top.png", "cart_front.png", "cart_side.png"),
 	wield_image = "cart_front.png",
 	on_place = function(itemstack, placer, pointed_thing)
@@ -423,7 +424,7 @@ minetest.register_craftitem("carts:cart", {
 minetest.register_craft({
 	output = "carts:cart",
 	recipe = {
-		{"ores:ferrum_ingot", "", "ores:ferrum_ingot"},
+		{"ores:ferrum_ingot", "",                  "ores:ferrum_ingot"},
 		{"ores:ferrum_ingot", "ores:ferrum_ingot", "ores:ferrum_ingot"},
 	},
 })

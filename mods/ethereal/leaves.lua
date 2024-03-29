@@ -102,9 +102,9 @@ minetest.register_node("ethereal:bamboo_bush", {
 minetest.register_craft({
 	output = "ethereal:bamboo_bush",
 	recipe = {
-		{"group:leaves", "group:leaves", "group:leaves"},
+		{"group:leaves", "group:leaves",           "group:leaves"},
 		{"group:leaves", "ethereal:bamboo_leaves", "group:leaves"},
-		{"group:leaves", "group:leaves", "group:leaves"},
+		{"group:leaves", "group:leaves",           "group:leaves"},
 	}
 })
 

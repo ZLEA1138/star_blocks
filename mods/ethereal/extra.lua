@@ -84,9 +84,9 @@ for n = 1, #cheat do
 	minetest.register_craft({
 		output = cheat[n][2] .. " " .. cheat[n][3],
 		recipe = {
-			{cheat[n][1], "", cheat[n][1]},
-			{"", cheat[n][1], ""},
-			{cheat[n][1], "", cheat[n][1]}
+			{cheat[n][1], "",          cheat[n][1]},
+			{"",          cheat[n][1], ""},
+			{cheat[n][1], "",          cheat[n][1]}
 		}
 	})
 end
@@ -94,12 +94,12 @@ end
 end -- END if
 
 -- Paper (2x3 string = 4 paper)
---minetest.register_craft({
---	output = "default:paper 2",
---	recipe = {
---		{"farming:cotton", "farming:cotton", "farming:cotton"}
---	}
---})
+minetest.register_craft({
+	output = "default:paper 2",
+	recipe = {
+		{"farming:cotton", "farming:cotton", "farming:cotton"}
+	}
+})
 
 
 -- Candles
@@ -195,8 +195,8 @@ minetest.register_craftitem("ethereal:bowl", {
 minetest.register_craft({
 	output = "ethereal:bowl 4",
 	recipe = {
-		{"group:wood", "", "group:wood"},
-		{"", "group:wood", ""}
+		{"group:wood", "",           "group:wood"},
+		{"",           "group:wood", ""}
 	}
 })
 
@@ -224,9 +224,9 @@ minetest.register_node("ethereal:stone_ladder", {
 minetest.register_craft({
 	output = "ethereal:stone_ladder 4",
 	recipe = {
-		{"group:stone", "", "group:stone"},
+		{"group:stone", "",            "group:stone"},
 		{"group:stone", "group:stone", "group:stone"},
-		{"group:stone", "", "group:stone"}
+		{"group:stone", "",            "group:stone"}
 	}
 })
 

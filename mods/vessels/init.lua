@@ -97,9 +97,9 @@ minetest.register_node("vessels:shelf", vessels_shelf_def)
 minetest.register_craft({
 	output = "vessels:shelf",
 	recipe = {
-		{"group:wood", "group:wood", "group:wood"},
+		{"group:wood",   "group:wood",   "group:wood"},
 		{"group:vessel", "group:vessel", "group:vessel"},
-		{"group:wood", "group:wood", "group:wood"},
+		{"group:wood",   "group:wood",   "group:wood"},
 	}
 })
 
@@ -123,9 +123,9 @@ minetest.register_node("vessels:glass_bottle", {
 minetest.register_craft( {
 	output = "vessels:glass_bottle 10",
 	recipe = {
-		{"default:glass", "", "default:glass"},
-		{"default:glass", "", "default:glass"},
-		{"", "default:glass", ""}
+		{"default:glass", "",              "default:glass"},
+		{"default:glass", "",              "default:glass"},
+		{"",              "default:glass", ""}
 	}
 })
 
@@ -149,8 +149,8 @@ minetest.register_node("vessels:drinking_glass", {
 minetest.register_craft( {
 	output = "vessels:drinking_glass 14",
 	recipe = {
-		{"default:glass", "", "default:glass"},
-		{"default:glass", "", "default:glass"},
+		{"default:glass", "",              "default:glass"},
+		{"default:glass", "",              "default:glass"},
 		{"default:glass", "default:glass", "default:glass"}
 	}
 })
@@ -175,9 +175,9 @@ minetest.register_node("vessels:ferrum_bottle", {
 minetest.register_craft( {
 	output = "vessels:ferrum_bottle 5",
 	recipe = {
-		{"ores:ferrum_ingot", "", "ores:ferrum_ingot"},
-		{"ores:ferrum_ingot", "", "ores:ferrum_ingot"},
-		{"", "ores:ferrum_ingot", ""}
+		{"ores:ferrum_ingot", "",                  "ores:ferrum_ingot"},
+		{"ores:ferrum_ingot", "",                  "ores:ferrum_ingot"},
+		{"",                  "ores:ferrum_ingot", ""}
 	}
 })
 

@@ -41,9 +41,9 @@ minetest.register_node("wood:ladder_wood", {
 minetest.register_craft({
 	output = "wood:ladder_wood 5",
 	recipe = {
-		{"group:stick", "", "group:stick"},
+		{"group:stick", "",            "group:stick"},
 		{"group:stick", "group:stick", "group:stick"},
-		{"group:stick", "", "group:stick"},
+		{"group:stick", "",            "group:stick"},
 	}
 })
 
@@ -128,7 +128,7 @@ minetest.register_craft({
 	output = "wood:chest_wood",
 	recipe = {
 		{"group:wood", "group:wood", "group:wood"},
-		{"group:wood", "", "group:wood"},
+		{"group:wood", "",           "group:wood"},
 		{"group:wood", "group:wood", "group:wood"},
 	}
 })
@@ -160,9 +160,9 @@ default.chest.register_chest("wood:chest_wood_locked", {
 minetest.register_craft({
 	output = "wood:chest_wood_locked",
 	recipe = {
-		{"group:wood", "group:wood", "group:wood"},
+		{"group:wood", "group:wood",        "group:wood"},
 		{"group:wood", "ores:ferrum_ingot", "group:wood"},
-		{"group:wood", "group:wood", "group:wood"},
+		{"group:wood", "group:wood",        "group:wood"},
 	}
 })
 
@@ -216,7 +216,6 @@ minetest.register_craft({
 	recipe = {
 		{"group:wood", "group:wood", "group:wood"},
 		{"group:wood", "group:wood", "group:wood"},
-		{"", "", ""},
 	}
 })
 
@@ -269,9 +268,9 @@ minetest.register_tool("wood:pick_wood", {
 minetest.register_craft({
 	output = "wood:pick_wood",
 	recipe = {
-		{"group:wood", "group:wood", "group:wood"},
-		{"", "group:stick", ""},
-		{"", "group:stick", ""}
+		{"group:wood", "group:wood",  "group:wood"},
+		{"",           "group:stick", ""},
+		{"",           "group:stick", ""}
 	}
 })
 
@@ -334,14 +333,14 @@ minetest.register_craft({
 	recipe = {
 		{"group:wood", "group:wood"},
 		{"group:wood", "group:stick"},
-		{"", "group:stick"}
+		{"",           "group:stick"}
 	}
 })
 
 minetest.register_craft({
 	output = "wood:axe_wood",
 	recipe = {
-		{"group:wood", "group:wood"},
+		{"group:wood",  "group:wood"},
 		{"group:stick", "group:wood"},
 		{"group:stick", ""}
 	}

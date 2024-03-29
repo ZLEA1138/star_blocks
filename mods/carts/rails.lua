@@ -18,7 +18,7 @@ minetest.register_craft({
 	output = "carts:rail 18",
 	recipe = {
 		{"ores:ferrum_ingot", "group:wood", "ores:ferrum_ingot"},
-		{"ores:ferrum_ingot", "", "ores:ferrum_ingot"},
+		{"ores:ferrum_ingot", "",           "ores:ferrum_ingot"},
 		{"ores:ferrum_ingot", "group:wood", "ores:ferrum_ingot"},
 	}
 })
@@ -35,9 +35,9 @@ carts:register_rail("carts:powerrail", {
 minetest.register_craft({
 	output = "carts:powerrail 18",
 	recipe = {
-		{"ores:ferrum_ingot", "group:wood", "ores:ferrum_ingot"},
-		{"ores:ferrum_ingot", "ores:cuprum_crystal", "ores:ferrum_ingot"},
-		{"ores:ferrum_ingot", "group:wood", "ores:ferrum_ingot"},
+		{"ores:ferrum_ingot", "group:wood",        "ores:ferrum_ingot"},
+		{"ores:ferrum_ingot", "ores:cuprum_ingot", "ores:ferrum_ingot"},
+		{"ores:ferrum_ingot", "group:wood",        "ores:ferrum_ingot"},
 	}
 })
 
@@ -54,8 +54,8 @@ carts:register_rail("carts:brakerail", {
 minetest.register_craft({
 	output = "carts:brakerail 18",
 	recipe = {
-		{"ores:ferrum_ingot", "group:wood", "ores:ferrum_ingot"},
+		{"ores:ferrum_ingot", "group:wood",     "ores:ferrum_ingot"},
 		{"ores:ferrum_ingot", "ores:coal_lump", "ores:ferrum_ingot"},
-		{"ores:ferrum_ingot", "group:wood", "ores:ferrum_ingot"},
+		{"ores:ferrum_ingot", "group:wood",     "ores:ferrum_ingot"},
 	}
 })

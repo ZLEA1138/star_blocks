@@ -48,7 +48,8 @@ minetest.after(5.3, cyclic_update)
 -- Mapping kit item
 
 minetest.register_craftitem("map:mapping_kit", {
-	description = S("Mapping Kit") .. "\n" .. S("Use with 'Minimap' key"),
+	description = S("Mapping Kit") .. "\n"
+				.. core.colorize("#B0C4DE", "Use with 'Minimap' key"),
 	inventory_image = "mapping_kit.png",
 	stack_max = 1,
 	groups = {flammable = 3, tool = 1},
@@ -64,9 +65,9 @@ minetest.register_craftitem("map:mapping_kit", {
 minetest.register_craft({
 	output = "map:mapping_kit",
 	recipe = {
-		{"default:glass", "default:paper", "group:stick"},
+		{"default:glass",     "default:paper", "group:stick"},
 		{"ores:ferrum_ingot", "default:paper", "ores:ferrum_ingot"},
-		{"group:wood", "default:paper", "dye:black"},
+		{"group:wood",        "default:paper", "dye:black"},
 	}
 })
 

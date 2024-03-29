@@ -575,9 +575,9 @@ if enable_tnt then
 	minetest.register_craft({
 		output = "tnt:tnt_stick 2",
 		recipe = {
-			{"tnt:gunpowder", "", "tnt:gunpowder"},
+			{"tnt:gunpowder", "",              "tnt:gunpowder"},
 			{"tnt:gunpowder", "default:paper", "tnt:gunpowder"},
-			{"tnt:gunpowder", "", "tnt:gunpowder"},
+			{"tnt:gunpowder", "",              "tnt:gunpowder"},
 		}
 	})
 

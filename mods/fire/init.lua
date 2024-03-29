@@ -85,7 +85,8 @@ minetest.register_node("fire:permanent_flame", permanent_fire_node)
 
 -- Flint and Steel
 minetest.register_tool("fire:flint_and_ferrum", {
-	description = S("Flint and Ferrum"),
+	description = S("Flint and Ferrum") .. "\n"
+				.. core.colorize("#B0C4DE", "Click to light fire"),
 	inventory_image = "flint_ferrum.png",
 	sound = {breaks = "default_tool_breaks"},
 

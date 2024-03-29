@@ -1,14 +1,14 @@
 minetest.register_tool("rangedweapons:cr12", {
 	wield_scale = {x=1.9,y=1.9,z=1.1},
-		description = "" ..core.colorize("#35cdff", "CR-12 Shotgun\n")
-						.. core.colorize("#FFFFFF", "Ranged damage: 10\n")
-						.. core.colorize("#FFFFFF", "Accuracy: 40%\n")
-						.. core.colorize("#FFFFFF", "Projectiles: 6\n")
-						.. core.colorize("#FFFFFF", "Knockback: 7\n")
-						.. core.colorize("#FFFFFF", "Critical chance: 8%\n")
-						.. core.colorize("#FFFFFF", "Critical efficiency: 2.2x\n")
-						.. core.colorize("#FFFFFF", "Rate of fire: 1\n")
-						.. core.colorize("#FFFFFF", "Enemy penetration: 40%"),
+		description = "CR-12 Shotgun",
+--						.. core.colorize("#FFFFFF", "Ranged damage: 10\n")
+--						.. core.colorize("#FFFFFF", "Accuracy: 40%\n")
+--						.. core.colorize("#FFFFFF", "Projectiles: 6\n")
+--						.. core.colorize("#FFFFFF", "Knockback: 7\n")
+--						.. core.colorize("#FFFFFF", "Critical chance: 8%\n")
+--						.. core.colorize("#FFFFFF", "Critical efficiency: 2.2x\n")
+--						.. core.colorize("#FFFFFF", "Rate of fire: 1\n")
+--						.. core.colorize("#FFFFFF", "Enemy penetration: 40%"),
 	range = 0,
 	inventory_image = "cr12.png",
 RW_powergun_capabilities = {

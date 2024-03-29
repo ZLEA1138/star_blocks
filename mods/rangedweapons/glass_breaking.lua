@@ -1,5 +1,5 @@
 minetest.register_craftitem("rangedweapons:glass_shards", {
-		description = "" ..core.colorize("#35cdff","Glass shards\n")..core.colorize("#FFFFFF", "3 of those, can be crafted into a file of glass fragments"),
+		description = "Glass Shards",
 	inventory_image = "glass_shards.png",
 })
 minetest.register_craft({
@@ -30,7 +30,7 @@ minetest.register_craft({
 --})
 
 minetest.register_node("rangedweapons:broken_glass", {
-	description = "Broken glass",
+	description = "Broken Glass",
 	drawtype = "glasslike_framed_optional",
 	tiles = {"glass_broken.png"},
 	use_texture_alpha = "clip", -- only needed for stairs API

@@ -1,13 +1,13 @@
 minetest.register_tool("rangedweapons:cr15", {
 	wield_scale = {x=1.75,y=1.75,z=1.3},
-		description = "" ..core.colorize("#35cdff", "CR-15 Rifle\n")
-						.. core.colorize("#FFFFFF", "Ranged damage: 4\n")
-						.. core.colorize("#FFFFFF", "Accuracy: 75%\n")
-						.. core.colorize("#FFFFFF", "Knockback: 0\n")
-						.. core.colorize("#FFFFFF", "Critical chance: 11%\n")
-						.. core.colorize("#FFFFFF", "Critical efficiency: 2.75x\n")
-						.. core.colorize("#FFFFFF", "Rate of fire: 0.25\n")
-						.. core.colorize("#FFFFFF", "Enemy penetration: 40%"),
+		description = "CR-15 Rifle",
+--						.. core.colorize("#FFFFFF", "Ranged damage: 4\n")
+--						.. core.colorize("#FFFFFF", "Accuracy: 75%\n")
+--						.. core.colorize("#FFFFFF", "Knockback: 0\n")
+--						.. core.colorize("#FFFFFF", "Critical chance: 11%\n")
+--						.. core.colorize("#FFFFFF", "Critical efficiency: 2.75x\n")
+--						.. core.colorize("#FFFFFF", "Rate of fire: 0.25\n")
+--						.. core.colorize("#FFFFFF", "Enemy penetration: 40%"),
 	range = 0,
     RW_powergun_capabilities = {
 		automatic_gun = 1,

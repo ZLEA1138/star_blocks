@@ -105,8 +105,8 @@ minetest.register_craft({
 	output = "ores:pick_wolfram",
 	recipe = {
 		{"ores:wolfram_ingot", "ores:wolfram_ingot", "ores:wolfram_ingot"},
-		{"", "group:stick", ""},
-		{"", "group:stick", ""}
+		{"",                   "group:stick",        ""},
+		{"",                   "group:stick",        ""}
 	}
 })
 
@@ -157,7 +157,7 @@ minetest.register_craft({
 	recipe = {
 		{"ores:wolfram_ingot", "ores:wolfram_ingot"},
 		{"ores:wolfram_ingot", "group:stick"},
-		{"", "group:stick"}
+		{"",                   "group:stick"}
 	}
 })
 
@@ -165,8 +165,8 @@ minetest.register_craft({
 	output = "ores:axe_wolfram",
 	recipe = {
 		{"ores:wolfram_ingot", "ores:wolfram_ingot"},
-		{"group:stick", "ores:wolfram_ingot"},
-		{"group:stick", ""}
+		{"group:stick",        "ores:wolfram_ingot"},
+		{"group:stick",        ""}
 	}
 })
 

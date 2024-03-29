@@ -1,15 +1,15 @@
 minetest.register_tool("rangedweapons:fc53", {
 	wield_scale = {x=1.75,y=1.75,z=1.20},
-		description = "" ..core.colorize("#35cdff", "FC-53 Carbine\n")
-						.. core.colorize("#35cdff", "Mode: Lethal\n")
-						.. core.colorize("#FFFFFF", "Ranged damage: 5\n")
-						.. core.colorize("#FFFFFF", "Accuracy: 85%\n")
-						.. core.colorize("#FFFFFF", "Knockback: 0\n")
-						.. core.colorize("#FFFFFF", "Critical chance: 9%\n")
-						.. core.colorize("#FFFFFF", "Critical efficiency: 2.0x\n")
-						.. core.colorize("#FFFFFF", "Rate of fire: 0.25\n")
-						.. core.colorize("#FFFFFF", "Enemy penetration: 40%\n")
-						.. core.colorize("#27a600", "Right click to change mode"),
+		description = "FC-53 Carbine\n"
+						.. "Mode: Lethal\n"
+--						.. core.colorize("#FFFFFF", "Ranged damage: 5\n")
+--						.. core.colorize("#FFFFFF", "Accuracy: 85%\n")
+--						.. core.colorize("#FFFFFF", "Knockback: 0\n")
+--						.. core.colorize("#FFFFFF", "Critical chance: 9%\n")
+--						.. core.colorize("#FFFFFF", "Critical efficiency: 2.0x\n")
+--						.. core.colorize("#FFFFFF", "Rate of fire: 0.25\n")
+--						.. core.colorize("#FFFFFF", "Enemy penetration: 40%\n")
+						.. core.colorize("#B0C4DE", "Right click to change mode"),
 	range = 0,
 	weapon_zoom = 18,
     RW_powergun_capabilities = {
@@ -46,16 +46,16 @@ minetest.register_tool("rangedweapons:fc53", {
 
 minetest.register_tool("rangedweapons:fc53_training", {
 	wield_scale = {x=1.75,y=1.75,z=1.20},
-		description = "" ..core.colorize("#35cdff", "FC-53 Carbine\n")
-						.. core.colorize("#35cdff", "Mode: Training\n")
-						.. core.colorize("#FFFFFF", "Ranged damage: 1\n")
-						.. core.colorize("#FFFFFF", "Accuracy: 85%\n")
-						.. core.colorize("#FFFFFF", "Knockback: 0\n")
-						.. core.colorize("#FFFFFF", "Critical chance: 9%\n")
-						.. core.colorize("#FFFFFF", "Critical efficiency: 2.0x\n")
-						.. core.colorize("#FFFFFF", "Rate of fire: 0.25\n")
-						.. core.colorize("#FFFFFF", "Enemy penetration: 40%\n")
-						.. core.colorize("#27a600", "Right click to change mode"),
+		description = "FC-53 Carbine\n"
+						.. "Mode: Training\n"
+--						.. core.colorize("#FFFFFF", "Ranged damage: 1\n")
+--						.. core.colorize("#FFFFFF", "Accuracy: 85%\n")
+--						.. core.colorize("#FFFFFF", "Knockback: 0\n")
+--						.. core.colorize("#FFFFFF", "Critical chance: 9%\n")
+--						.. core.colorize("#FFFFFF", "Critical efficiency: 2.0x\n")
+--						.. core.colorize("#FFFFFF", "Rate of fire: 0.25\n")
+--						.. core.colorize("#FFFFFF", "Enemy penetration: 40%\n")
+						.. core.colorize("#B0C4DE", "Right click to change mode"),
 	range = 0,
 	weapon_zoom = 18,
     RW_powergun_capabilities = {

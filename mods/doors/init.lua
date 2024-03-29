@@ -538,7 +538,7 @@ function doors.register_door(name, def)
 	local modname = name:sub(1, i - 1)
 	if not def.tiles then
 		if def.protected then
-			def.tiles = {{name = "door_steel.png", backface_culling = true}}
+			def.tiles = {{name = "door_ferrum.png", backface_culling = true}}
 		else
 			def.tiles = {{name = "door_wood.png", backface_culling = true}}
 		end

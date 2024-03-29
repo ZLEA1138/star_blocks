@@ -53,7 +53,7 @@ stairs.register_stair_and_slab(
 )
 
 -- door
-doors.register("door_durasteel", {
+doors.register("door_ferrum", {
 		tiles = {{name = "door_ferrum.png", backface_culling = true}},
 		description = "Ferrum Door",
 		inventory_image = "door_ferrum_inv.png",
@@ -154,7 +154,7 @@ minetest.register_craft({
 	recipe = {
 		{"ores:ferrum_ingot", "ores:ferrum_ingot", "ores:ferrum_ingot"},
 		{"ores:ferrum_ingot", "ores:ferrum_ingot", "ores:ferrum_ingot"},
-		{"", "group:stick", ""},
+		{"",                  "group:stick",       ""},
 	}
 })
 
@@ -184,9 +184,9 @@ minetest.register_node("ores:ladder_ferrum", {
 minetest.register_craft({
 	output = "ores:ladder_ferrum 15",
 	recipe = {
-		{"ores:ferrum_ingot", "", "ores:ferrum_ingot"},
+		{"ores:ferrum_ingot", "",                  "ores:ferrum_ingot"},
 		{"ores:ferrum_ingot", "ores:ferrum_ingot", "ores:ferrum_ingot"},
-		{"ores:ferrum_ingot", "", "ores:ferrum_ingot"},
+		{"ores:ferrum_ingot", "",                  "ores:ferrum_ingot"},
 	}
 })
 
@@ -245,8 +245,8 @@ minetest.register_craft({
 	output = "ores:pick_ferrum",
 	recipe = {
 		{"ores:ferrum_ingot", "ores:ferrum_ingot", "ores:ferrum_ingot"},
-		{"", "group:stick", ""},
-		{"", "group:stick", ""}
+		{"",                  "group:stick",       ""},
+		{"",                  "group:stick",       ""}
 	}
 })
 
@@ -297,7 +297,7 @@ minetest.register_craft({
 	recipe = {
 		{"ores:ferrum_ingot", "ores:ferrum_ingot"},
 		{"ores:ferrum_ingot", "group:stick"},
-		{"", "group:stick"}
+		{"",                  "group:stick"}
 	}
 })
 
@@ -305,8 +305,8 @@ minetest.register_craft({
 	output = "ores:axe_ferrum",
 	recipe = {
 		{"ores:ferrum_ingot", "ores:ferrum_ingot"},
-		{"group:stick", "ores:ferrum_ingot"},
-		{"group:stick", ""}
+		{"group:stick",       "ores:ferrum_ingot"},
+		{"group:stick",       ""}
 	}
 })
 

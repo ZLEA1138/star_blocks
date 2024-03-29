@@ -12,8 +12,8 @@ minetest.register_alias("bucket_lava", "bucket:bucket_lava")
 minetest.register_craft({
 	output = "bucket:bucket_empty 1",
 	recipe = {
-		{"ores:ferrum_ingot", "", "ores:ferrum_ingot"},
-		{"", "ores:ferrum_ingot", ""},
+		{"ores:ferrum_ingot", "",                  "ores:ferrum_ingot"},
+		{"",                  "ores:ferrum_ingot", ""},
 	}
 })
 

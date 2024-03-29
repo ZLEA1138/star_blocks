@@ -116,9 +116,9 @@ minetest.register_craftitem("ores:aereus_ingot", {
 minetest.register_craft({
 	output = "ores:aereus_ingot 9",
 	recipe = {
-		{"ores:cuprum_ingot", "ores:cuprum_ingot", "ores:cuprum_ingot"},
+		{"ores:cuprum_ingot", "ores:cuprum_ingot",  "ores:cuprum_ingot"},
 		{"ores:cuprum_ingot", "ores:stannum_ingot", "ores:cuprum_ingot"},
-		{"ores:cuprum_ingot", "ores:cuprum_ingot", "ores:cuprum_ingot"},
+		{"ores:cuprum_ingot", "ores:cuprum_ingot",  "ores:cuprum_ingot"},
 	}
 })
 
@@ -156,8 +156,8 @@ minetest.register_craft({
 	output = "ores:pick_aereus",
 	recipe = {
 		{"ores:aereus_ingot", "ores:aereus_ingot", "ores:aereus_ingot"},
-		{"", "group:stick", ""},
-		{"", "group:stick", ""}
+		{"",                  "group:stick",       ""},
+		{"",                  "group:stick",       ""}
 	}
 })
 
@@ -208,7 +208,7 @@ minetest.register_craft({
 	recipe = {
 		{"ores:aereus_ingot", "ores:aereus_ingot"},
 		{"ores:aereus_ingot", "group:stick"},
-		{"", "group:stick"}
+		{"",                  "group:stick"}
 	}
 })
 
@@ -216,8 +216,8 @@ minetest.register_craft({
 	output = "ores:axe_aereus",
 	recipe = {
 		{"ores:aereus_ingot", "ores:aereus_ingot"},
-		{"group:stick", "ores:aereus_ingot"},
-		{"group:stick", ""}
+		{"group:stick",       "ores:aereus_ingot"},
+		{"group:stick",       ""}
 	}
 })
 

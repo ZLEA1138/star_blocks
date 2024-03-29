@@ -50,7 +50,8 @@ minetest.after(4.7, cyclic_update)
 -- Binoculars item
 
 minetest.register_craftitem("binoculars:binoculars", {
-	description = S("Binoculars") .. "\n" .. S("Use with 'Zoom' key"),
+	description = S("Binoculars") .. "\n"
+				.. core.colorize("#B0C4DE", "Use with 'Zoom' key"),
 	inventory_image = "binoculars.png",
 	stack_max = 1,
 	groups = {tool = 1},
@@ -66,8 +67,8 @@ minetest.register_craftitem("binoculars:binoculars", {
 minetest.register_craft({
 	output = "binoculars:binoculars",
 	recipe = {
-		{"default:obsidian_glass", "", "default:obsidian_glass"},
-		{"ores:aereus_ingot", "ores:aereus_ingot", "ores:aereus_ingot"},
-		{"default:obsidian_glass", "", "default:obsidian_glass"},
+		{"default:obsidian_glass", "",                  "default:obsidian_glass"},
+		{"ores:aereus_ingot",      "ores:aereus_ingot", "ores:aereus_ingot"},
+		{"default:obsidian_glass", "",                  "default:obsidian_glass"},
 	}
 })

@@ -1,13 +1,13 @@
 minetest.register_tool("rangedweapons:fr20", {
 	wield_scale = {x=3.0,y=3.0,z=3.0},
-		description = "" ..core.colorize("#35cdff", "FR-20 Rotary Cannon\n")
-						.. core.colorize("#FFFFFF", "Ranged damage: 5\n")
-						.. core.colorize("#FFFFFF", "Accuracy: 50%\n")
-						.. core.colorize("#FFFFFF", "Knockback: 0\n")
-						.. core.colorize("#FFFFFF", "Critical chance: 14%\n")
-						.. core.colorize("#FFFFFF", "Critical efficiency: 3.0x\n")
-						.. core.colorize("#FFFFFF", "Rate of fire: 0.04\n")
-						.. core.colorize("#FFFFFF", "Enemy penetration: 30%"),
+		description = "FR-20 Rotary Cannon",
+--						.. core.colorize("#FFFFFF", "Ranged damage: 5\n")
+--						.. core.colorize("#FFFFFF", "Accuracy: 50%\n")
+--						.. core.colorize("#FFFFFF", "Knockback: 0\n")
+--						.. core.colorize("#FFFFFF", "Critical chance: 14%\n")
+--						.. core.colorize("#FFFFFF", "Critical efficiency: 3.0x\n")
+--						.. core.colorize("#FFFFFF", "Rate of fire: 0.04\n")
+--						.. core.colorize("#FFFFFF", "Enemy penetration: 30%"),
 	range = 0,
     RW_powergun_capabilities = {
 		automatic_gun = 1,

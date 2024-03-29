@@ -172,7 +172,7 @@ minetest.register_craft({
 	recipe = {
 		{"wood:ferrumwood_wood", "wood:ferrumwood_wood", "wood:ferrumwood_wood"},
 		{"wood:ferrumwood_wood", "wood:ferrumwood_wood", "wood:ferrumwood_wood"},
-		{"", "", ""},
+		{"",                     "",                     ""},
 	}
 })
 
@@ -213,9 +213,9 @@ minetest.register_tool("wood:pick_ferrumwood", {
 minetest.register_craft({
 	output = "wood:pick_ferrumwood",
 	recipe = {
-		{"wood:ferrumwood_wood", "wood:ferrumwood_wood", "wood:ferrumwood_wood"},
-		{"", "wood:stick_ferrumwood", ""},
-		{"", "wood:stick_ferrumwood", ""}
+		{"wood:ferrumwood_wood", "wood:ferrumwood_wood",  "wood:ferrumwood_wood"},
+		{"",                     "wood:stick_ferrumwood", ""},
+		{"",                     "wood:stick_ferrumwood", ""}
 	}
 })
 
@@ -266,14 +266,14 @@ minetest.register_craft({
 	recipe = {
 		{"wood:ferrumwood_wood", "wood:ferrumwood_wood"},
 		{"wood:ferrumwood_wood", "wood:stick_ferrumwood"},
-		{"", "wood:stick_ferrumwood"}
+		{"",                     "wood:stick_ferrumwood"}
 	}
 })
 
 minetest.register_craft({
 	output = "wood:axe_ferrumwood",
 	recipe = {
-		{"wood:ferrumwood_wood", "wood:ferrumwood_wood"},
+		{"wood:ferrumwood_wood",  "wood:ferrumwood_wood"},
 		{"wood:stick_ferrumwood", "wood:ferrumwood_wood"},
 		{"wood:stick_ferrumwood", ""}
 	}

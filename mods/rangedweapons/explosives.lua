@@ -170,7 +170,8 @@ local barrel_boom = {
 tnt.register_tnt(barrel_boom)
 
 minetest.register_node("rangedweapons:barrel", {
-		description = "" ..core.colorize("#35cdff","Fuel barrel\n")..core.colorize("#FFFFFF", "It will explode if shot by blaster"),
+		description = "Fuel Barrel\n"
+						.. core.colorize("#B0C4DE", "It will explode if shot by a gun"),
 	tiles = {
 		"barrel_top.png",
 		"barrel_top.png",

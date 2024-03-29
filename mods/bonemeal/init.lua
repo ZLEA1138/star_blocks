@@ -494,7 +494,8 @@ end
 
 -- mulch (strength 1)
 minetest.register_craftitem("bonemeal:mulch", {
-	description = S("Mulch"),
+	description = S("Mulch") .. "\n"
+				.. core.colorize("#B0C4DE", "Right click to grow plants"),
 	inventory_image = "mulch.png",
 
 	on_use = function(itemstack, user, pointed_thing)
@@ -520,7 +521,8 @@ minetest.register_craftitem("bonemeal:mulch", {
 
 -- bonemeal (strength 2)
 minetest.register_craftitem("bonemeal:bonemeal", {
-	description = S("Bone Meal"),
+	description = S("Bone Meal") .. "\n"
+				.. core.colorize("#B0C4DE", "Right click to grow plants"),
 	inventory_image = "bonemeal.png",
 
 	on_use = function(itemstack, user, pointed_thing)
@@ -546,7 +548,8 @@ minetest.register_craftitem("bonemeal:bonemeal", {
 
 -- fertiliser (strength 3)
 minetest.register_craftitem("bonemeal:fertiliser", {
-	description = S("Fertiliser"),
+	description = S("Fertiliser") .. "\n"
+				.. core.colorize("#B0C4DE", "Right click to grow plants"),
 	inventory_image = "fertiliser.png",
 
 	on_use = function(itemstack, user, pointed_thing)
@@ -594,9 +597,9 @@ minetest.register_craftitem("bonemeal:gelatin_powder", {
 minetest.register_craft({
 	output = "bonemeal:gelatin_powder 4",
 	recipe = {
-		{"group:bone", "group:bone", "group:bone"},
+		{"group:bone",   "group:bone",   "group:bone"},
 		{a.bucket_water, a.bucket_water, a.bucket_water},
-		{a.bucket_water, a.torch, a.bucket_water}
+		{a.bucket_water, a.torch,        a.bucket_water}
 	},
 	replacements = {
 		{a.bucket_water, a.bucket_empty .. " 5"}
@@ -630,7 +633,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "bonemeal:mulch 4",
 	recipe = {
-		{"group:tree", "group:leaves", "group:leaves"},
+		{"group:tree",   "group:leaves", "group:leaves"},
 		{"group:leaves", "group:leaves", "group:leaves"},
 		{"group:leaves", "group:leaves", "group:leaves"}
 	}

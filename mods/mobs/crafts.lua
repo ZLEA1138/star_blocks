@@ -12,15 +12,16 @@ local items = {
 	ferrum_ingot = "ores:ferrum_ingot",
 	aurum_block = "ores:aurum_block",
 	stone = "default:stone",
-	wood = "default:wood",
-	fence_wood = "default:fence_wood",
+	wood = "wood:tavifruit_wood",
+	fence_wood = "wood:fence_tavifruit",
 	meat_raw = "group:food_meat_raw",
 	meat_cooked = "group:food_meat",
 }
 
 -- name tag
 minetest.register_craftitem("mobs:nametag", {
-	description = S("Name Tag"),
+	description = S("Name Tag") .. "\n"
+				.. core.colorize("#B0C4DE", "Right-click mob to name"),
 	inventory_image = "nametag.png",
 	groups = {flammable = 2, nametag = 1}
 })
@@ -64,7 +65,8 @@ minetest.register_craft({
 
 -- lasso
 minetest.register_tool("mobs:lasso", {
-	description = S("Lasso (right-click animal to put in inventory)"),
+	description = S("Lasso") .. "\n"
+				.. core.colorize("#B0C4DE", "Right-click animal to put in inventory"),
 	inventory_image = "lasso.png",
 	groups = {flammable = 2}
 })
@@ -72,9 +74,9 @@ minetest.register_tool("mobs:lasso", {
 minetest.register_craft({
 	output = "mobs:lasso",
 	recipe = {
-		{ "", items.string, items.string },
-		{ "", items.string, items.string },
-		{ items.string, "", "" }
+		{ "",           items.string, items.string },
+		{ "",           items.string, items.string },
+		{ items.string, "",           "" }
 	}
 })
 
@@ -82,7 +84,8 @@ minetest.register_alias("mobs:magic_lasso", "mobs:lasso")
 
 -- net
 minetest.register_tool("mobs:net", {
-	description = S("Mob Net (right-click animal to put in inventory)"),
+	description = S("Mob Net") .. "\n"
+				.. core.colorize("#B0C4DE", "Right-click animal to put in inventory"),
 	inventory_image = "net_mob.png",
 	groups = {flammable = 2}
 })
@@ -90,15 +93,16 @@ minetest.register_tool("mobs:net", {
 minetest.register_craft({
 	output = "mobs:net",
 	recipe = {
-		{ items.stick, "", items.stick },
-		{ items.stick, "", items.stick },
+		{ items.stick,  "",          items.stick },
+		{ items.stick,  "",          items.stick },
 		{ items.string, items.stick, items.string }
 	}
 })
 
 -- shears (right click to shear animal)
 minetest.register_tool("mobs:shears", {
-	description = S("Shears (right-click to shear)"),
+	description = S("Shears") .. "\n"
+				.. core.colorize("#B0C4DE", "Right-click to shear"),
 	inventory_image = "shears.png",
 	groups = {flammable = 2}
 })
@@ -106,14 +110,16 @@ minetest.register_tool("mobs:shears", {
 minetest.register_craft({
 	output = "mobs:shears",
 	recipe = {
-		{ "", items.ferrum_ingot, "" },
-		{ "", items.stick, items.ferrum_ingot }
+		{ items.ferrum_ingot, "" },
+		{ items.stick,        items.ferrum_ingot }
 	}
 })
 
 -- protection device
 minetest.register_craftitem("mobs:protector", {
-	description = S("Mob Protection Device"),
+	description = S("Mob Protection Device") .. "\n"
+				.. "Level 1" .. "\n"
+				.. core.colorize("#B0C4DE", "Right-click mob to protect"),
 	inventory_image = "protector.png",
 	groups = {flammable = 2}
 })
@@ -121,15 +127,17 @@ minetest.register_craftitem("mobs:protector", {
 minetest.register_craft({
 	output = "mobs:protector",
 	recipe = {
-		{ items.stone, items.stone, items.stone },
+		{ items.stone, items.stone,       items.stone },
 		{ items.stone, items.aurum_block, items.stone },
-		{ items.stone, items.stone, items.stone }
+		{ items.stone, items.stone,       items.stone }
 	}
 })
 
 -- level 2 protection device
 minetest.register_craftitem("mobs:protector2", {
-	description = S("Mob Protection Device (Level 2)"),
+	description = S("Mob Protection Device") .. "\n"
+				.. "Level 2" .. "\n"
+				.. core.colorize("#B0C4DE", "Right-click mob to protect"),
 	inventory_image = "protector2.png",
 	groups = {flammable = 2}
 })
@@ -137,9 +145,9 @@ minetest.register_craftitem("mobs:protector2", {
 minetest.register_craft({
 	output = "mobs:protector2",
 	recipe = {
-		{ "mobs:protector", items.aurum_block, "mobs:protector" },
+		{ "mobs:protector",  items.aurum_block, "mobs:protector" },
 		{ items.aurum_block, items.aurum_block, items.aurum_block },
-		{ "mobs:protector", items.aurum_block, "mobs:protector" }
+		{ "mobs:protector",  items.aurum_block, "mobs:protector" }
 	}
 })
 
@@ -153,7 +161,7 @@ minetest.register_craftitem("mobs:saddle", {
 minetest.register_craft({
 	output = "mobs:saddle",
 	recipe = {
-		{"mobs:leather", "mobs:leather", "mobs:leather"},
+		{"mobs:leather", "mobs:leather",     "mobs:leather"},
 		{"mobs:leather", items.ferrum_ingot, "mobs:leather"},
 		{"mobs:leather", items.ferrum_ingot, "mobs:leather"}
 	}
@@ -207,8 +215,8 @@ minetest.register_node("mobs:fence_top", {
 minetest.register_craft({
 	output = "mobs:fence_top 12",
 	recipe = {
-		{"group:wood", "group:wood", "group:wood"},
-		{"", items.fence_wood, ""}
+		{"group:wood", "group:wood",     "group:wood"},
+		{"",           items.fence_wood, ""}
 	}
 })
 

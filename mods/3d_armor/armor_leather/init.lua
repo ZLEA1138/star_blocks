@@ -155,8 +155,8 @@ if armor.materials.leather then
 	minetest.register_craft({
 		output = "3d_armor:helmet_"..s,
 		recipe = {
-			{m, m, m},
-			{m, "", m},
+			{m,  m,  m},
+			{m,  "", m},
 			{"", "", ""},
 		},
 	})
@@ -164,14 +164,14 @@ if armor.materials.leather then
 		output = "3d_armor:chestplate_"..s,
 		recipe = {
 			{m, "", m},
-			{m, m, m},
-			{m, m, m},
+			{m, m,  m},
+			{m, m,  m},
 		},
 	})
 	minetest.register_craft({
 		output = "3d_armor:leggings_"..s,
 		recipe = {
-			{m, m, m},
+			{m, m,  m},
 			{m, "", m},
 			{m, "", m},
 		},

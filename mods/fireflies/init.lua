@@ -89,7 +89,8 @@ minetest.register_node("fireflies:hidden_firefly", {
 
 -- bug net
 minetest.register_tool("fireflies:bug_net", {
-	description = S("Bug Net"),
+	description = S("Bug Net") .. "\n"
+				.. core.colorize("#B0C4DE", "Right-click to catch bugs"),
 	inventory_image = "net_bug.png",
 	on_use = function(itemstack, player, pointed_thing)
 		local player_name = player and player:get_player_name() or ""
@@ -119,7 +120,7 @@ minetest.register_craft( {
 	recipe = {
 		{"farming:string", "farming:string"},
 		{"farming:string", "farming:string"},
-		{"group:stick", ""}
+		{"group:stick",    ""}
 	}
 })
 

@@ -420,22 +420,22 @@ minetest.register_abm({
 minetest.register_craft({
 	output = "3d_armor_stand:armor_stand",
 	recipe = {
-		{"", "group:fence", ""},
-		{"", "group:fence", ""},
-		{"default:steel_ingot", "default:steel_ingot", "default:steel_ingot"},
+		{"",                  "group:fence",       ""},
+		{"",                  "group:fence",       ""},
+		{"ores:ferrum_ingot", "ores:ferrum_ingot", "ores:ferrum_ingot"},
 	}
 })
 
 minetest.register_craft({
 	output = "3d_armor_stand:locked_armor_stand",
 	recipe = {
-		{"3d_armor_stand:armor_stand", "default:steel_ingot"},
+		{"3d_armor_stand:armor_stand", "ores:ferrum_ingot"},
 	}
 })
 
 minetest.register_craft({
 	output = "3d_armor_stand:shared_armor_stand",
 	recipe = {
-		{"3d_armor_stand:armor_stand", "default:copper_ingot"},
+		{"3d_armor_stand:armor_stand", "ores:cuprum_ingot"},
 	}
 })

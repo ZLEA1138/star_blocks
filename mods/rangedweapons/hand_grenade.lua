@@ -45,7 +45,12 @@ local grenade_boom = {
 minetest.register_craftitem("rangedweapons:grenade", {
 	stack_max= 1,
 	wield_scale = {x=1.1,y=1.1,z=1.05},
-		description = "" ..core.colorize("#35cdff","Thermal detonator\n") ..core.colorize("#FFFFFF", "Explosion radius: 3\n")..core.colorize("#FFFFFF", "Throw force: 12\n")  ..core.colorize("#FFFFFF", "Grenade gravitational pull: 6\n") ..core.colorize("#ffc000", "Right-click to unpin, Left click to throw after unpinning\n") ..core.colorize("#ffc000", "Thrown or not, it will explode after 3 secons from unpinning, be careful!"),
+		description = "Grenade\n"
+--						..core.colorize("#FFFFFF", "Explosion radius: 3\n")
+--						..core.colorize("#FFFFFF", "Throw force: 12\n")
+--						..core.colorize("#FFFFFF", "Grenade gravitational pull: 6\n")
+						..core.colorize("#B0C4DE", "Right-click to unpin, Left click to throw after unpinning\n")
+						..core.colorize("#B0C4DE", "Thrown or not, it will explode after 3 secons from unpinning, be careful!"),
 	range = 0,
 	inventory_image = "grenade.png",
 	on_secondary_use = function(itemstack, user, pointed_thing)
@@ -76,7 +81,7 @@ end
 minetest.register_craftitem("rangedweapons:grenade_armed", {
 	stack_max= 1,
 	wield_scale = {x=1.1,y=1.1,z=1.05},
-	description = "***HURRY UP AND THROW IT!!!***",
+	description = "Unfortunately, if you are taking the time to read this, you are already dead",
 	range = 0,
 	inventory_image = "grenade_armed.png",
 	groups = {not_in_creative_inventory = 1},

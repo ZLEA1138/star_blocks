@@ -43,7 +43,7 @@ minetest.register_craft({
 	output = "farming:ruberberry_pie",
 	recipe = {
 		{"group:food_flour", "group:food_sugar", "group:food_ruberberries"},
-		{"", a.baking_tray, ""}
+		{"",                 a.baking_tray,      ""}
 	},
 	replacements = {{"group:food_baking_tray", "farming:baking_tray"}}
 })

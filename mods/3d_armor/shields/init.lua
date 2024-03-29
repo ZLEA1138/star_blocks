@@ -198,8 +198,8 @@ for k, v in pairs(armor.materials) do
 	minetest.register_craft({
 		output = "shields:shield_"..k,
 		recipe = {
-			{v, v, v},
-			{v, v, v},
+			{v,  v, v},
+			{v,  v, v},
 			{"", v, ""},
 		},
 	})

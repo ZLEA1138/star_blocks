@@ -306,9 +306,9 @@ minetest.register_node("ethereal:quicksand", {
 minetest.register_craft({
 	output = "ethereal:quicksand",
 	recipe = {
-		{"group:sand", "group:sand", "group:sand"},
+		{"group:sand", "group:sand",          "group:sand"},
 		{"group:sand", "bucket:bucket_water", "group:sand"},
-		{"group:sand", "group:sand", "group:sand"}
+		{"group:sand", "group:sand",          "group:sand"}
 	},
 	replacements = {
 		{"bucket:bucket_water", "bucket:bucket_empty"}

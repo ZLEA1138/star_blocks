@@ -306,9 +306,9 @@ minetest.register_craftitem("farming:ringcake", {
 minetest.register_craft({
 	output = "farming:ringcake 3",
 	recipe = {
-		{"", "group:food_wheat", ""},
+		{"",                 "group:food_wheat", ""},
 		{"group:food_wheat", "group:food_sugar", "group:food_wheat"},
-		{"", "group:food_wheat", ""}
+		{"",                 "group:food_wheat", ""}
 	}
 })
 
@@ -355,7 +355,7 @@ minetest.register_craft({
 	output = "farming:tavifruit_pie",
 	recipe = {
 		{a.flour, "group:food_sugar", "group:food_tavifruit"},
-		{"", a.baking_tray, ""}
+		{"",      a.baking_tray,      ""}
 	},
 	replacements = {{"group:food_baking_tray", "farming:baking_tray"}}
 })

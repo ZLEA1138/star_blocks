@@ -190,8 +190,8 @@ minetest.register_craftitem(":mobs:glass_milk_purple", {
 minetest.register_craft({
 	output = "mobs:glass_milk_purple 4",
 	recipe = {
-		{"vessels:drinking_glass", "vessels:drinking_glass"},
-		{"vessels:drinking_glass", "vessels:drinking_glass"},
+		{"vessels:drinking_glass",  "vessels:drinking_glass"},
+		{"vessels:drinking_glass",  "vessels:drinking_glass"},
 		{"mobs:bucket_milk_purple", ""}
 	},
 	replacements = {{"mobs:bucket_milk_purple", "bucket:bucket_empty"}}
@@ -202,7 +202,7 @@ minetest.register_craft({
 	recipe = {
 		{"mobs:glass_milk_purple", "mobs:glass_milk_purple"},
 		{"mobs:glass_milk_purple", "mobs:glass_milk_purple"},
-		{"bucket:bucket_empty", ""}
+		{"bucket:bucket_empty",    ""}
 	},
 	replacements = {
 		{"mobs:glass_milk_purple", "vessels:drinking_glass 4"}
@@ -258,9 +258,9 @@ minetest.register_node(":mobs:cheese_purple_block", {
 minetest.register_craft({
 	output = "mobs:cheese_purple_block",
 	recipe = {
-		{"group:food_cheese_purple", "group:food_cheese_purple", "group:food_cheese_purple"},
-		{"group:food_cheese_purple", "group:food_cheese_purple", "group:food_cheese_purple"},
-		{"group:food_cheese_purple", "group:food_cheese_purple", "group:food_cheese_purple"}
+		{"mobs:cheese_purple", "mobs:cheese_purple", "mobs:cheese_purple"},
+		{"mobs:cheese_purple", "mobs:cheese_purple", "mobs:cheese_purple"},
+		{"mobs:cheese_purple", "mobs:cheese_purple", "mobs:cheese_purple"}
 	}
 })
 
@@ -290,8 +290,8 @@ if wb or bw then
 	minetest.register_craft({
 		output = "mobs:glass_milk_purple 4",
 		recipe = {
-			{"vessels:drinking_glass_purple", "vessels:drinking_glass_purple"},
-			{"vessels:drinking_glass_purple", "vessels:drinking_glass_purple"},
+			{"vessels:drinking_glass_purple",  "vessels:drinking_glass_purple"},
+			{"vessels:drinking_glass_purple",  "vessels:drinking_glass_purple"},
 			{"mobs:wooden_bucket_milk_purple", ""}
 		},
 		replacements = {{"mobs:wooden_bucket_milk_purple", return_item}}
@@ -302,10 +302,10 @@ if wb or bw then
 		recipe = {
 			{"mobs:glass_milk_purple", "mobs:glass_milk_purple"},
 			{"mobs:glass_milk_purple", "mobs:glass_milk_purple"},
-			{return_item, ""}
+			{return_item,              ""}
 		},
 		replacements = {
-			{"group:food_milk_glass", "vessels:drinking_glass 4"}
+			{"mobs:glass_milk_purple", "vessels:drinking_glass 4"}
 		}
 	})
 

@@ -699,46 +699,46 @@ minetest.register_entity("rangedweapons:shot_bullet", rangedweapons_shot_bullet)
 --	},
 --})
 
-minetest.register_craftitem("rangedweapons:hk38", {
-	stack_max= 25,
-	wield_scale = {x=0.8,y=0.8,z=2.4},
-		description = "" ..core.colorize("#35cdff","HK-38 Grenade\n")..core.colorize("#FFFFFF", "Bullet damage: 10 \n") ..core.colorize("#FFFFFF", "Bullet crit efficiency: 1.0 \n") ..core.colorize("#FFFFFF", "Bullet crit chance: 1% \n") ..core.colorize("#FFFFFF", "Bullet velocity: 15 \n") ..core.colorize("#FFFFFF", "Bullet knockback: 10 \n") ..core.colorize("#FFFFFF", "Bullet gravity: 5 \n")  ..core.colorize("#FFFFFF", "explodes on impact with a radius of 2\n")  ..core.colorize("#FFFFFF", "Ammunition for grenade launchers"),
-	inventory_image = "hk38.png",
-	RW_ammo_capabilities = {
-		ammo_damage = {fleshy=10,knockback=15},
-		ammo_critEffc = 1.0,
-		ammo_crit = 1,
-		ammo_velocity = 15,
-		ammo_glass_breaking = 1,
-		ammo_entity = "rangedweapons:shot_bullet",
-		ammo_visual = "sprite",
-		ammo_texture = "rangedweapons_rocket_fly.png",
-		shell_entity = "rangedweapons:empty_shell",
-		shell_visual = "wielditem",
-		shell_texture = "rangedweapons:shell_grenadedrop",
-		ammo_projectile_size = 0.15,
-		has_sparks = 1,
-		ammo_gravity = 5,
-		ignites_explosives = 1,
+--minetest.register_craftitem("rangedweapons:hk38", {
+--	stack_max= 25,
+--	wield_scale = {x=0.8,y=0.8,z=2.4},
+--		description = "" ..core.colorize("#35cdff","HK-38 Grenade\n")..core.colorize("#FFFFFF", "Bullet damage: 10 \n") ..core.colorize("#FFFFFF", "Bullet crit efficiency: 1.0 \n") ..core.colorize("#FFFFFF", "Bullet crit chance: 1% \n") ..core.colorize("#FFFFFF", "Bullet velocity: 15 \n") ..core.colorize("#FFFFFF", "Bullet knockback: 10 \n") ..core.colorize("#FFFFFF", "Bullet gravity: 5 \n")  ..core.colorize("#FFFFFF", "explodes on impact with a radius of 2\n")  ..core.colorize("#FFFFFF", "Ammunition for grenade launchers"),
+--	inventory_image = "hk38.png",
+--	RW_ammo_capabilities = {
+--		ammo_damage = {fleshy=10,knockback=15},
+--		ammo_critEffc = 1.0,
+--		ammo_crit = 1,
+--		ammo_velocity = 15,
+--		ammo_glass_breaking = 1,
+--		ammo_entity = "rangedweapons:shot_bullet",
+--		ammo_visual = "sprite",
+--		ammo_texture = "rangedweapons_rocket_fly.png",
+--		shell_entity = "rangedweapons:empty_shell",
+--		shell_visual = "wielditem",
+--		shell_texture = "rangedweapons:shell_grenadedrop",
+--		ammo_projectile_size = 0.15,
+--		has_sparks = 1,
+--		ammo_gravity = 5,
+--		ignites_explosives = 1,
 
-		OnCollision = function(player,bullet,target)
-			tnt.boom(bullet.object:get_pos(), {radius = 2})
-		end,
-		ammo_particles = {
-			velocity = {x=1,y=1,z=1},
-			acceleration = {x=1,y=1,z=1},
-			collisiondetection = true,
-			lifetime = 1,
-			texture = "tnt_smoke.png",
-			minsize = 50,
-			maxsize = 75,
-			pos_randomness = 50,
-			glow = 20,
-			gravity = 10,
-			amount = {1,1}
-		},
-	},
-})
+--		OnCollision = function(player,bullet,target)
+--			tnt.boom(bullet.object:get_pos(), {radius = 2})
+--		end,
+--		ammo_particles = {
+--			velocity = {x=1,y=1,z=1},
+--			acceleration = {x=1,y=1,z=1},
+--			collisiondetection = true,
+--			lifetime = 1,
+--			texture = "tnt_smoke.png",
+--			minsize = 50,
+--			maxsize = 75,
+--			pos_randomness = 50,
+--			glow = 20,
+--			gravity = 10,
+--			amount = {1,1}
+--		},
+--	},
+--})
 --})
 
 --minetest.register_craftitem("rangedweapons:rocket", {

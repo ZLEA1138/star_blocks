@@ -38,7 +38,8 @@ end
 
 
 -- NPCs
-dofile(path .. "npc.lua") -- TenPlus1
+dofile(path .. "npc_tavin.lua") -- TenPlus1
+dofile(path .. "npc_doge.lua")
 dofile(path .. "trader.lua")
 
 

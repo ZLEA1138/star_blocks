@@ -129,8 +129,8 @@ function stairs.register_stair(subname, recipeitem, groups, images, description,
 		minetest.register_craft({
 			output = "stairs:stair_" .. subname .. " 8",
 			recipe = {
-				{"", "", recipeitem},
-				{"", recipeitem, recipeitem},
+				{"",         "",         recipeitem},
+				{"",         recipeitem, recipeitem},
 				{recipeitem, recipeitem, recipeitem},
 			},
 		})
@@ -332,8 +332,8 @@ function stairs.register_stair_inner(subname, recipeitem, groups, images,
 		minetest.register_craft({
 			output = "stairs:stair_inner_" .. subname .. " 7",
 			recipe = {
-				{"", recipeitem, ""},
-				{recipeitem, "", recipeitem},
+				{"",         recipeitem, ""},
+				{recipeitem, "",         recipeitem},
 				{recipeitem, recipeitem, recipeitem},
 			},
 		})

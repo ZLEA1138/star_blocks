@@ -98,7 +98,7 @@ end
 minetest.register_decoration({
 	name = "butterflies:butterfly",
 	deco_type = "simple",
-	place_on = {"default:dirt_with_grass"},
+	place_on = {"ethereal:grass_dirt"},
 	place_offset_y = 2,
 	sidelen = 80,
 	fill_ratio = 0.005,

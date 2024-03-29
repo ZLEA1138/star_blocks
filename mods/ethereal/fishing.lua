@@ -462,9 +462,9 @@ minetest.register_tool("ethereal:fishing_rod", {
 minetest.register_craft({
 	output = "ethereal:fishing_rod",
 	recipe = {
-		{"","","group:stick"},
-		{"","group:stick","farming:string"},
-		{"group:stick","","farming:string"}
+		{"",           "",           "group:stick"},
+		{"",           "group:stick","farming:string"},
+		{"group:stick","",           "farming:string"}
 	}
 })
 
