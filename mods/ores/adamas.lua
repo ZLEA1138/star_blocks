@@ -67,7 +67,7 @@ minetest.register_craftitem("ores:adamas_crystal_purple", {
 wielded_light.register_item_light("ores:adamas_crystal_purple", 7)
 
 minetest.register_craftitem("ores:adamas_crystal_red", {
-    description = "Burning Adamas Crystal",
+    description = "Raging Adamas Crystal",
     stack_max = 1,
     inventory_image = "adamas_crystal_red.png"
 })

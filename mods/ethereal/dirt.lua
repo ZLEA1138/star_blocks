@@ -44,7 +44,7 @@ minetest.register_craft({
 -- other dirt
 local dirts = {
 	"Bamboo", "Grass", "Jungle", "Prairie", "Cold",
-	"Savanna", "Fungus", "Swamp"
+	"Savanna", "Fungus", "Swamp", "Snow"
 }
 
 for n = 1, #dirts do
