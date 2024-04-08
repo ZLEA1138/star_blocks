@@ -60,7 +60,7 @@ minetest.register_tool("rangedweapons:cfc38_sniper", {
 	weapon_zoom = 7.5,
     RW_powergun_capabilities = {
 		automatic_gun = 1,
-		power_damage = {fleshy=18,knockback=15},
+		power_damage = {fleshy=30,knockback=15},
 		power_crit = 30,
 		power_critEffc = 3.0,
 		power_cooling = "rangedweapons:cfc38_sniper",

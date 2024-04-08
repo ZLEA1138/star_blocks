@@ -241,6 +241,8 @@ minetest.register_craft({
 	burntime = 1,
 })
 
+minetest.register_alias("default:stick", "wood:stick")
+
 
 
 -- ENTITIES
