@@ -80,7 +80,14 @@ mobs:register_mob("mobs_trooper:trooper", {
 		end
 
 		return true -- run only once, false/nil runs every activation
-	end
+	end,
+	on_die = function(self, pos, cmi_cause)
+		for _,players in pairs(minetest.get_objects_inside_radius(pos,64)) do
+			if players:is_player() then
+				awards.unlock(players:get_player_name(), "federation_enemy")
+			end
+		end
+	end,
 })
 
 --mobs:spawn({
